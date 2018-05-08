@@ -1,0 +1,25 @@
+<ul class="pagination">
+
+    <li><a class="pagination_link" *ngIf="numpage > 1" attr.id="{{numpage - 1}}" (click)="gotopage(numpage - 1)">prev</a></li>
+    <li><a class="pagination_link" id="1" (click)="gotopage(1)" *ngIf="numpage > neighbourhood + 1">1</a></li>
+
+    <li class="pagination_link disabled"><a *ngIf="numpage > neighbourhood - -2">ooo</a></li>
+
+    <li *ngFor="let i of getRangeArray(evaluateMax(1, numpage - neighbourhood), (numpage - 1))">
+        <a class="pagination_link" attr.id="{{i}}" (click)="gotopage(i)">{{i}}</a>
+    </li>
+
+    <li class="active" *ngIf="(numpage >= 1) && (numpage <= pages)">
+        <a class="pagination_link" attr.id="{{numpage}}" (click)="gotopage(numpage)">{{numpage}}</a>
+    </li>
+
+    <li *ngFor="let j of getRangeArray(numpage - -1, evaluateMin(numpage - -neighbourhood, pages))">
+        <a class="pagination_link" attr.id="{{j}}" (click)="gotopage(j)">{{j}}</a>
+    </li>
+
+    <li class="pagination_link disabled"><a *ngIf="numpage < (pages - (neighbourhood - -1))">ooo</a></li>
+
+    <li><a class="pagination_link" *ngIf="numpage < pages - neighbourhood" attr.id="{{pages}}" (click)="gotopage(pages)">{{pages}}</a></li>
+    <li><a class="pagination_link" *ngIf="numpage < pages" attr.id="{{numpage - -1}}" (click)="gotopage(numpage - -1)">next</a></li>
+
+</ul>

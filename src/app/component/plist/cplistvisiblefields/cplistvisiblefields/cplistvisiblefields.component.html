@@ -1,0 +1,4 @@
+<ul class="list-inline">
+  <li *ngFor="let field of fields;trackBy: trackByFn">
+    <input type="checkbox" [(ngModel)]="field.IsVisible" [checked]="field.IsVisible">{{field.ShortName}}</li>
+</ul>

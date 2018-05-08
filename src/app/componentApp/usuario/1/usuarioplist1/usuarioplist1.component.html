@@ -1,0 +1,35 @@
+<app-menu></app-menu>
+<div>
+  <tabset>
+    <tab heading="Consulta" id="tab1">
+      <div role="tabpanel" id="pane0" class="tab-pane fade active in">
+        <p></p>
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-12">
+            <app-cplistinfo [url]="url" [numpage]="numpage" [rpp]="rpp" [registers]="registers" [orderparams]="orderParams" [filterparams]="filterParams"
+              [searchtext]="searchText"></app-cplistinfo>
+          </div>
+          <div class="col-lg-6  col-md-6 col-sm-8 text-center">
+            <app-cplistpagination [url]="url" [numpage]="numpage" [rpp]="rpp" [pages]="pages" [neighbourhood]="neighbourhood" [filterparams]="filterParams"
+              [orderparams]="orderParams" [sfilterparams]="sfilterParams"></app-cplistpagination>
+          </div>
+          <div class="col-lg-3  col-md-3 col-sm-4 text-center">
+            <app-cplistrpp [url]="url" [numpage]="numpage" [rpp]="rpp" [filterparams]="filterParams" [orderparams]="orderParams"></app-cplistrpp>
+          </div>
+        </div>
+        <p></p>
+      </div>
+    </tab>
+    <tab heading="Nuevo">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>
+            <br>
+            <a class="btn btn-primary" *ngIf="xob" href="{{ob}}/{{profile}}/x{{xob}}/newx/{{xid}}">Crear</a>
+            <a class="btn btn-primary" *ngIf="!xob" href="{{ob}}/{{profile}}/new">Crear</a>
+          </p>
+        </div>
+      </div>
+    </tab>
+  </tabset>
+</div>

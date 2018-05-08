@@ -1,0 +1,14 @@
+<p>Mostrando una consulta de {{registers}} registros.</p>
+<p *ngIf="!orderparams">Contenido no ordenado</p>
+<p *ngIf="orderparams">Contenido ordenado: {{orderparams}}
+    <a (click)="doresetorder()" id="linkQuitarOrden">(Quitar orden)</a>
+</p>
+<p *ngIf="!filterparams">Contenido no filtrado en servidor</p>
+<p *ngIf="filterparams">Contenido filtrado: {{filterparams}}
+    <a (click)="doresetfilter()" id="linkQuitarFiltro">(Quitar filtro)</a>                                                       
+</p>
+<p *ngIf="searchText === 0">Contenido no filtrado en cliente</p>
+<p *ngIf="searchText > 0">Contenido filtrado en cliente 
+    <a (click)="resetClientfilter()" id="linkQuitarFiltro">(Quitar filtro)</a>
+</p>
+<p></p>

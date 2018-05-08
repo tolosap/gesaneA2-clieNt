@@ -1,0 +1,40 @@
+<tr>
+  <ng-container *ngFor="let field of metap">
+    <th *ngIf="field.IsVisible">
+      <div *ngIf="field.IsVisible && field.Type === 'Id'" class="text-center" style="border-color:#ddd;">
+        <label>{{field.ShortName}}&nbsp;
+          <span class="fa fa-key"></span>
+        </label>
+        <br/>
+        <a *ngIf="field.IsVisible" (click)="doorder(field.Name, 'asc')">
+          <i class="glyphicon glyphicon-arrow-up"></i>
+        </a>
+        <a *ngIf="field.IsVisible" (click)="doorder(field.Name, 'desc')">
+          <i class="glyphicon glyphicon-arrow-down"></i>
+        </a>
+      </div>
+      <ng-container *ngIf="field.IsVisible && field.Type !== 'Id'" class="text-center" style="border-color:#ddd;">
+        <label>{{field.ShortName}}</label>
+        <br/>
+        <i *ngIf="field.IsVisible && field.Type === 'Link'" class="fa fa-hand-o-down"></i>
+        <a *ngIf="field.IsVisible && field.Type !== 'Link' && field.Type === 'ForeignObject'" (click)="doorder('id_' + field.References, 'asc')">
+          <i class="glyphicon glyphicon-arrow-up"></i>
+        </a>
+        <a *ngIf="field.IsVisible && field.Type !== 'Link' && field.Type === 'ForeignObject'" (click)="doorder('id_' + field.References, 'desc')">
+          <i class="glyphicon glyphicon-arrow-down"></i>
+        </a>
+        <a *ngIf="field.IsVisible && field.Type !== 'Link' && field.Type !== 'ForeignObject'" (click)="doorder(field.Name, 'asc')">
+          <i class="glyphicon glyphicon-arrow-up"></i>
+        </a>
+        <a *ngIf="field.IsVisible && field.Type !== 'Link' && field.Type !== 'ForeignObject'" (click)="doorder(field.Name, 'desc')">
+          <i class="glyphicon glyphicon-arrow-down"></i>
+        </a>
+      </ng-container>
+    </th>
+  </ng-container>
+  <th class="text-center">
+    <label>Acciones</label>
+    <br/>
+    <i class="fa fa-cogs"></i>
+  </th>
+</tr>

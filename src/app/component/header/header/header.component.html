@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-xs-9 text-left" *ngIf="isdataavailable">
+        <h1 *ngIf="op === 'plistx'" id="broth_title" style="font-family:Oswald , serif;">Listado de {{meta[ob]?.PluralDescription}}</h1>
+        <h1 *ngIf="op === 'newx'" id="broth_title" style="font-family:Oswald , serif;">Nuevo {{meta[ob]?.SingularDescription}}</h1>
+        <h1 *ngIf="op === 'editx'" id="broth_title" style="font-family:Oswald , serif;">Edición de {{meta[ob]?.SingularDescription}}</h1>        
+        <h1 *ngIf="op === 'plist'" id="broth_title" style="font-family:Oswald , serif;">Listado de {{meta[ob]?.PluralDescription}}</h1>
+        <h1 *ngIf="op === 'edit'" id="broth_title" style="font-family:Oswald , serif;">Edición de {{meta[ob]?.SingularDescription}}</h1>
+        <h1 *ngIf="op === 'new'" id="broth_title" style="font-family:Oswald , serif;">Alta de {{meta[ob]?.SingularDescription}}</h1>
+        <h1 *ngIf="op === 'view'" id="broth_title" style="font-family:Oswald , serif;">Vista de {{meta[ob]?.SingularDescription}}</h1>
+        <h1 *ngIf="op === 'remove'" id="broth_title" style="font-family:Oswald , serif;">Borrado de {{meta[ob]?.SingularDescription}}</h1>
+        <h1 *ngIf="op === 'selection'" id="broth_title" style="font-family:Oswald , serif;">Selección de {{meta[ob]?.PluralDescription}}</h1>
+        <h1 *ngIf="op === 'login'" id="broth_title" style="font-family:Oswald , serif;">Formulario de entrada al sistema</h1>
+        <h1 *ngIf="op === 'profile'" id="broth_title" style="font-family:Oswald , serif;">Perfil del usuario</h1>
+        <h1 *ngIf="op === 'passchange'" id="broth_title" style="font-family:Oswald , serif;">Cambio de contraseña</h1>
+        <h1 *ngIf="op === 'logout'" id="broth_title" style="font-family:Oswald , serif;">Bye</h1>
+    </div>
+    <div *ngIf="isdataavailabe" class="col-xs-3 text-right" id="broth_operationicon"><i fa [ngClass]="meta[ob]?.Icon"></i></div>
+</div>
