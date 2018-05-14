@@ -39,6 +39,11 @@ import { Usuarioedit1Component } from './componentApp/usuario/1/usuarioedit1/usu
 import { Usuarioremove1Component } from './componentApp/usuario/1/usuarioremove1/usuarioremove1.component';
 import { Xtipousuarioplist1Component } from './componentApp/usuario/1/tipousuario/xtipousuarioplist1/xtipousuarioplist1.component';
 import { LogoutComponent } from './component/logout/logout.component';
+import { Tipousuarioview1Component } from './componentApp/tipousuario/tipousuarioview1/tipousuarioview1.component';
+import { Tipousuarioremove1Component } from './componentApp/tipousuario/tipousuarioremove1/tipousuarioremove1.component';
+import { Tipousuarioplist1Component } from './componentApp/tipousuario/tipousuarioplist1/tipousuarioplist1.component';
+import { Tipousuarionew1Component } from './componentApp/tipousuario/tipousuarionew1/tipousuarionew1.component';
+import { Tipousuarioedit1Component } from './componentApp/tipousuario/tipousuarioedit1/tipousuarioedit1.component';
 
 
 
@@ -57,7 +62,7 @@ import { LogoutComponent } from './component/logout/logout.component';
     PlistheaderComponent,
     HeaderComponent, GetForeignDescPipe, ClipStringPipe, BooleanizePipe,
      LoginComponent, Usuarioview1Component, Usuarionew1Component,
-      Usuarioedit1Component, Usuarioremove1Component, Xtipousuarioplist1Component, LogoutComponent
+      Usuarioedit1Component, Usuarioremove1Component, Xtipousuarioplist1Component, LogoutComponent, Tipousuarioview1Component, Tipousuarioremove1Component, Tipousuarioplist1Component, Tipousuarionew1Component, Tipousuarioedit1Component
   ],
   imports: [HttpClientModule, BrowserModule, app_routing,
      BsDropdownModule.forRoot(app_routes), FormsModule, TabsModule.forRoot(),
