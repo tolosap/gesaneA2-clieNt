@@ -24,22 +24,22 @@
                           <!-- LISTA -->
                           <ul *dropdownMenu class="dropdown-menu" role="menu">
                               <li class="dropdown-header">Administrador:</li>
-  
+
                               <li role="menuitem">
-                                  <a href="#" class="dropdown-item" (click)="fill('rafael');login()">rafael</a>
+                                  <a class="dropdown-item" (click)="fill('rafael');login()">rafael</a>
                               </li>
-  
+
                               <li class="dropdown-header">Coordinador:</li>
-  
+
                               <li role="menuitem">
                                   <a href="#" class="dropdown-item" (click)="fill('coordinadora')">coordinadora</a>
                               </li>
                               <li class="divider dropdown-divider"></li>
-  
+
                               <li class="dropdown-header">Profesor:</li>
-  
+
                               <li role="menuitem">
-                                  <a href="#" class="dropdown-item" (click)="fill('mariajose')">mariajose</a>
+                                  <a class="dropdown-item" (click)="fill('mariajose');login()">mariajose</a>
                               </li>
                               <li role="menuitem">
                                   <a href="#" class="dropdown-item" (click)="fill('isabel')">isabel</a>
@@ -47,60 +47,60 @@
                               <li role="menuitem">
                                   <a href="#" class="dropdown-item" (click)="fill('maria')">maria</a>
                               </li>
-  
+
                               <li class="divider dropdown-divider"></li>
                               <li class="dropdown-header">Alumno mariajose:</li>
-  
+
                               <li role="menuitem">
                                   <a href="#" class="dropdown-item" (click)="fill('pepe')">pepe</a>
                               </li>
                               <li role="menuitem">
-                                  <a href="#" class="dropdown-item" (click)="fill('raquel')">raquel</a>
+                                  <a class="dropdown-item" (click)="fill('raquel');login()">raquel</a>
                               </li>
                               <li role="menuitem">
                                   <a href="#" class="dropdown-item" (click)="fill('carlos')">carlos</a>
                               </li>
-  
+
                               <li class="divider dropdown-divider"></li>
                               <li class="dropdown-header">Alumno isabel:</li>
-  
+
                               <li role="menuitem">
                                   <a href="#" class="dropdown-item" (click)="fill('sergio')">sergio</a>
                               </li>
                               <li role="menuitem">
                                   <a href="#" class="dropdown-item" (click)="fill('ana')">ana</a>
                               </li>
-  
+
                               <li class="divider dropdown-divider"></li>
                               <li class="dropdown-header">Alumno maria:</li>
-  
+
                               <li role="menuitem">
                                   <a href="#" class="dropdown-item" (click)="fill('sandra')">sandra</a>
                               </li>
                               <li role="menuitem">
                                   <a href="#" class="dropdown-item" (click)="fill('eva')">eva</a>
                               </li>
-  
+
                               <li class="divider dropdown-divider"></li>
                               <li class="dropdown-header">Visitante:</li>
-  
+
                               <li role="menuitem">
                                   <a href="#" class="dropdown-item" (click)="fill('visitante')">visitante</a>
                               </li>
-  
+
                               <li class="divider dropdown-divider"></li>
                               <li class="dropdown-header">Registros de alumnos grupo maria josé:</li>
-  
+
                               <li role="menuitem">
                                   <a href="#" class="dropdown-item" (click)="fillRegistro('ausias-mariajose-2016-2017')">ausias-mariajose-2016-2017</a>
                               </li>
-  
+
                               <li class="dropdown-header">Registros de alumnos grupo isabel:</li>
                               <li role="menuitem">
                                   <a href="#" class="dropdown-item" (click)="fillRegistro('ausias-isabel-2016-2017')">ausias-isabel-2016-2017</a>
                               </li>
                               <li class="dropdown-header"> Registros de alumnos grupo maria:</li>
-  
+
                               <li role="menuitem">
                                   <a href="#" class="dropdown-item" (click)="fillRegistro('sagunto-maria-2016-2017')">sagunto-maria-2016-2017</a>
                               </li>
@@ -128,9 +128,9 @@
                         />
                       </div>
                     </form> -->
-                    
+
                     <br />
-                    <div class="panel panel-default">
+                    <!--<div class="panel panel-default">
                       <div class="panel-heading">¿Eres alumno y no tienes cuenta?</div>
                       <div class="panel-body">
                         Pide a tu profesor el código para darte de alta e introdúcelo aqui:
@@ -142,7 +142,7 @@
                           <span *ngIf="checkGrupoStatusMsg" class="help-block">{{checkGrupoStatusMsg}}</span>
                         </div>
                       </div>
-                    </div>
+                    </div>-->
                   </div>
                 </div>
               </div>

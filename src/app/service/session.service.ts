@@ -10,13 +10,16 @@ export class SessionService {
     private sessionServerCS: SessionServerCallService, private router: Router
   ) {}
 
-  isSessionActiveTF = false;
-  sessionInfo = null;
-  nextUrl = null;
-  allData = null;
-  variable;
-  variable2;
-  data = Array<Object>();
+  public isSessionActiveTF = false;
+  public sessionInfo = null;
+  public nextUrl = null;
+  public allData = null;
+  public variable;
+  public variable2;
+  public data = Array<Object>();
+  public sessMetaProp = null;
+  public sessMetaObj = null;
+
 
   anyAuthenticationPromise() {
     this.sessionServerCS.checkSession().subscribe(
@@ -81,22 +84,43 @@ export class SessionService {
   }
 
   isSessionActive() {
-    return this.isSessionActiveTF;
+    if ( localStorage.getItem('currentUser') != null) {
+      return true;
+    } else {
+      return false;
+    }
   }
   setSessionInactive() {
     this.isSessionActiveTF = false;
     this.sessionInfo = null;
+    localStorage.removeItem('currentUser');
   }
   setSessionActive() {
     this.isSessionActiveTF = true;
   }
   getSessionInfo() {
-    return this.sessionInfo;
+    // return this.sessionInfo;
+    return JSON.parse(localStorage.getItem('currentUser'));
   }
   setSessionInfo(value) {
     this.sessionInfo = value;
+    localStorage.setItem('currentUser', JSON.stringify(value));
   }
   setNextURL(value) {
     this.nextUrl = value;
+  }
+  setSessionMetadataProp(value) {
+    this.sessMetaProp = value;
+    localStorage.setItem('currentMetaProp', JSON.stringify(value));
+  }
+  getSessionMetadataProp() {
+    return JSON.parse(localStorage.getItem('currentMetaProp'));
+  }
+  setSessionMetadataObj(value) {
+    this.sessMetaObj = value;
+    localStorage.setItem('currentMetaObj', JSON.stringify(value));
+  }
+  getSessionMetadataObj() {
+    return JSON.parse(localStorage.getItem('currentMetaObj'));
   }
 }

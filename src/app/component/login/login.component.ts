@@ -39,7 +39,6 @@ export class LoginComponent implements OnInit {
     if (this.constantService.debugging()) {
       this.user['username'] = nombre;
       this.user['password'] = nombre;
-      console.log(this.user);
     }
   }
 
@@ -77,16 +76,19 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.sessionServerCallService
-      // .login(this.user.username, this.user.password)
       .login(this.user.username, this.user.password)
       .subscribe(response => {
+        console.log(response);
         this.interm = response;
         if (this.interm.status === 200) {
           this.sessionService.setSessionActive();
+          console.log(this.interm.json);
+          this.sessionService.setSessionMetadataProp(this.interm.json.metaProperties);
+          this.sessionService.setSessionMetadataObj(this.interm.json.metaObject);
           this.sessionService.setSessionInfo(this.interm.json.data);
           this.session_info = this.sessionService.getSessionInfo();
           this.isSessionActive = this.sessionService.isSessionActive();
-          this.routes.navigate(['home']);
+          this.routes.navigate(['/home']);
         } else {
           this.sessionService.setSessionInactive();
           this.session_info = this.sessionService.getSessionInfo();

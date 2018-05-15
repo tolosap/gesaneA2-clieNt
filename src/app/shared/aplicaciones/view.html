@@ -44,7 +44,7 @@
                         <a href="{{oMetap.References}}/{{profile}}/view/{{bean[oMetap.Name]?.data.id}}">{{bean[oMetap.Name]|GetForeignDescription}}</a>
                       </td>
                       <td *ngIf="oMetap.Type == 'Link'">
-                        <a *ngIf="bean[oMetap.Name] > 0" class="btn btn-default btn-xs" href="{{oMetap.References}}/{{profile}}/x{{ob}}/plistx/{{bean['id']}}">{{bean[oMetap.Name]}}</a>
+                        <a *ngIf="bean[oMetap.Name] > 0" class="btn btn-default btn-xs" href="{{oMetap.References}}/{{profile}}/x{{ob}}/plistx/{{bean['id']}}/1/10">{{bean[oMetap.Name]}}</a>
                         <div *ngIf="bean[oMetap.Name] == 0">{{bean[oMetap.Name]}}</div>
                       </td>
                     </tr>
@@ -55,7 +55,7 @@
                     <a *ngIf="!onlyview" class="btn btn-primary" href="{{ob}}/{{profile}}/edit/{{bean['id']}}">Editar</a>
                     <!-- <a *ngIf="showEdit(bean)" class="btn btn-primary" href="{{ob}}/{{profile}}/edit/{{bean.id}}">Editar</a> -->
                     <a *ngIf="!onlyview" class="btn btn-danger" href="{{ob}}/{{profile}}/remove/{{bean['id']}}">Borrar</a>
-                    <a class="btn btn-info" href="{{ob}}/{{profile}}/plist">Ir al listado de {{ob}}</a>
+                    <a class="btn btn-info" href="{{ob}}/{{profile}}/plist/1/10">Ir al listado de {{ob}}</a>
                     <a class="btn btn-default" (click)="back()">Volver</a>
                     <a class="btn btn-default" href="home">Cerrar</a>
                   </div>

@@ -20,7 +20,7 @@ export class SessionServerCallService {
         username +
         '&pass=' +
         password, { withCredentials: true }
-    ).map((response: Response) => response.json());
+    );
   }
 
   setPass(oldpass, newpass) {
@@ -38,7 +38,7 @@ export class SessionServerCallService {
   logout() {
     return this.connection.get(
       this.constantService.getAppUrl() + '?ob=usuario&op=logout', { withCredentials: true }
-    ).map((response: Response) => response.json());
+    );
   }
 
   checkSession() {

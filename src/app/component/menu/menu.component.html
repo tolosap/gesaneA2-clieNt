@@ -14,6 +14,7 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav" id="appMenu">
+        <!-- ZONA COMÚN A TODOS LOS USUARIOS -->
         <li [ngClass]="{ 'active':  isActive('/home')}">
           <a [routerLink]="['/home']">Home</a>
         </li>
@@ -22,45 +23,118 @@
           <a [routerLink]="['/license']">Licencia</a>
         </li>
 
-        <!-- Administración ------------------------------------------- -->
-        <li dropdown  [ngClass]="{'active': isActive('/usuario') || isActive('/tipousuario') ||  isActive('/grupo') ||  isActive('/curso') ||  isActive('/centro/')}">
+        <!-- -------------------------- ADMINISTRACIÓN ------------------------ -->
+        <li dropdown *ngIf="session_info != null && session_info.obj_tipousuario.data.id == 1 && meta != null" [ngClass]="{'active': isActive('/usuario') || isActive('/tipousuario') ||  isActive('/grupo') ||  isActive('/curso') ||  isActive('/centro/')}">
           <a href dropdownToggle (click)="false" >
-            <i fa class="far fa-list-alt"></i>Usuarios
-            <span class="caret"></span>
+            <i fa class="far fa-list-alt"></i>Usuarios<span class="caret"></span>
           </a>
           <ul class="dropdown-menu" role="menu">
-            <li  [ngClass]="{ 'active':  isActive('/usuario/1/plist')}"><a [routerLink]="['/usuario/1/plist/1/10']"><i fa class="fas fa-user"></i> Listado Usuarios</a></li>
-            <li  [ngClass]="{ 'active':  isActive('/tipousuario/1/plist')}"><a [routerLink]="['tipousuario/1/plist']"> <i fa class="fas fa-user"></i> Listado TipoUsuarios</a></li>
-           <!-- <li  [ngClass]="{ 'active':  isActive('/grupo/1/plist')}"><a [routerLink]="['grupo/1/plist']"> <i  [ngClass]=" meta.grupo.Icon"></i> {{ meta.grupo.PluralDescription}}</a></li>
-            <li  [ngClass]="{ 'active':  isActive('/curso/1/plist')}"><a [routerLink]="['curso/1/plist']"> <i  [ngClass]=" meta.curso.Icon"></i> {{ meta.curso.PluralDescription}}</a></li>
-            <li  [ngClass]="{ 'active':  isActive('/centro/1/plist')}"><a [routerLink]="['centro/1/plist']"> <i  [ngClass]=" meta.centro.Icon"></i> {{ meta.centro.PluralDescription}}</a></li>
-           -->
+            <li  [ngClass]="{ 'active':  isActive('/usuario/1/plist')}"><a [routerLink]="['/usuario/1/plist/1/10']"><i fa class="fas fa-user"></i> {{meta.usuario.PluralDescription}}</a></li>
+            <li  [ngClass]="{ 'active':  isActive('/tipousuario/1/plist')}"><a [routerLink]="['/tipousuario/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.tipousuario.PluralDescription}}</a></li>
+            <li  [ngClass]="{ 'active':  isActive('/grupo/1/plist')}"><a [routerLink]="['/grupo/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.grupo.PluralDescription}}</a></li>
+            <li  [ngClass]="{ 'active':  isActive('/curso/1/plist')}"><a [routerLink]="['/curso/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.curso.PluralDescription}}</a></li>
+            <li  [ngClass]="{ 'active':  isActive('/centro/1/plist')}"><a [routerLink]="['/centro/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.centro.PluralDescription}}</a></li>
           </ul>
         </li>
 
+        <li dropdown *ngIf="session_info != null && session_info.obj_tipousuario.data.id == 1 && meta != null" [ngClass]="{'active': isActive('/centrosanitario') || isActive('/dependencia') || isActive('/tipodependencia')}">
+          <a href dropdownToggle (click)="false" >
+            <i fa class="far fa-list-alt"></i>Centros sanitarios<span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="dropdown-header">Datos Específicos del centro sanitario</li>
+            <li [ngClass]="{ 'active': isActive('/centrosanitario/1/plist')}"><a [routerLink]="['/centrosanitario/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.centrosanitario.PluralDescription}}</a></li>
+            <li [ngClass]="{ 'active': isActive('/dependencia/1/plist')}"><a [routerLink]="['/dependencia/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.dependencia.PluralDescription}}</a></li>
+            <li class="dropdown-header">Datos Comunes</li>
+            <li [ngClass]="{ 'active': isActive('/tipodependencia/1/plist')}"><a [routerLink]="['/tipodependencia/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.tipodependencia.PluralDescription}}</a></li>
+          </ul>
+        </li>
 
-      </ul>
+        <li dropdown *ngIf="session_info != null && session_info.obj_tipousuario.data.id == 1 && meta != null" [ngClass]="{'active': isActive('/servicio') || isActive('/tiposervicio') || isActive('/especialidad') || isActive('/medico/') || isActive('/categoriaprofesional/')}">
+          <a href dropdownToggle (click)="false" >
+            <i fa class="far fa-list-alt"></i>Personal sanitario<span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="dropdown-header">Datos Específicos del centro sanitario</li>
+            <li [ngClass]="{ 'active': isActive('/medico/1/plist')}"><a [routerLink]="['/medico/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.medico.PluralDescription}}</a></li>
+            <li class="dropdown-header">Datos Comunes</li>
+            <li [ngClass]="{ 'active': isActive('/servicio/1/plist')}"><a [routerLink]="['/servicio/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.servicio.PluralDescription}}</a></li>
+            <li [ngClass]="{ 'active': isActive('/tiposervicio/1/plist')}"><a [routerLink]="['/tiposervicio/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.tiposervicio.PluralDescription}}</a></li>
+            <li [ngClass]="{ 'active': isActive('/especialidad/1/plist')}"><a [routerLink]="['/especialidad/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.especialidad.PluralDescription}}</a></li>
+            <li [ngClass]="{ 'active': isActive('/categoriaprofesional/1/plist')}"><a [routerLink]="['/categoriaprofesional/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.categoriaprofesional.PluralDescription}}</a></li>
+          </ul>
+        </li>
+
+        <li dropdown *ngIf="session_info != null && session_info.obj_tipousuario.data.id == 1 && meta != null" [ngClass]="{'active': isActive('/paciente') || isActive('/episodio') || isActive('/sexo') || isActive('/destinoalta') || isActive('/modalidadepisodio') || isActive('/circunstanciasalta') || isActive('/tipoepisodio')}">
+          <a href dropdownToggle (click)="false" >
+            <i fa class="far fa-list-alt"></i>Pacientes<span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="dropdown-header">Datos Específicos del centro sanitario</li>
+            <li [ngClass]="{ 'active': isActive('/paciente/1/plist')}"><a [routerLink]="['/paciente/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.paciente.PluralDescription}}</a></li>
+            <li [ngClass]="{ 'active': isActive('/episodio/1/plist')}"><a [routerLink]="['/episodio/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.episodio.PluralDescription}}</a></li>
+            <li class="dropdown-header">Datos Comunes</li>
+            <li [ngClass]="{ 'active': isActive('/sexo/1/plist')}"><a [routerLink]="['/sexo/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.sexo.PluralDescription}}</a></li>
+            <li [ngClass]="{ 'active': isActive('/destinoalta/1/plist')}"><a [routerLink]="['/destinoalta/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.destinoalta.PluralDescription}}</a></li>
+            <li [ngClass]="{ 'active': isActive('/modalidadepisodio/1/plist')}"><a [routerLink]="['/modalidadepisodio/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.modalidadepisodio.PluralDescription}}</a></li>
+            <li [ngClass]="{ 'active': isActive('/circunstanciasalta/1/plist')}"><a [routerLink]="['/circunstanciasalta/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.circunstanciasalta.PluralDescription}}</a></li>
+            <li [ngClass]="{ 'active': isActive('/tipoepisodio/1/plist')}"><a [routerLink]="['/tipoepisodio/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.tipoepisodio.PluralDescription}}</a></li>
+          </ul>
+        </li>
+
+        <li dropdown *ngIf="session_info != null && session_info.obj_tipousuario.data.id == 1 && meta != null" [ngClass]="{'active': isActive('/tipopago') || isActive('/factura')}">
+          <a href dropdownToggle (click)="false" >
+            <i fa class="far fa-list-alt"></i>Facturación<span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li [ngClass]="{ 'active': isActive('/tipopago/1/plist')}"><a [routerLink]="['/tipopago/1/plist/1/10']"> <i fa class="fas fa-user"></i>  {{meta.tipopago.PluralDescription}}</a></li>
+            <li [ngClass]="{ 'active': isActive('/factura/1/plist')}"><a [routerLink]="['/factura/1/plist/1/10']"> <i fa class="fas fa-user"></i> {{meta.factura.PluralDescription}}</a></li>
+          </ul>
+        </li>
+
+        <!-- ------------------ PROFESOR ------------------------ -->
+        <li dropdown *ngIf="session_info!= null && session_info.obj_tipousuario.data.id == 3 && meta != null">
+            <a href dropdownToggle (click)="false" >
+            <i class="fa fa-icon-list-alt"></i>Profesor<span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+              <li class="dropdown-header">Gestión sanitaria</li>
+              <li [ngClass]="{ 'active': isActive('/paciente/3/plist')}"><a [routerLink]="['/paciente/3/plist/1/10']"> <i fa class="fas fa-user"></i> {{meta.paciente.PluralDescription}}</a></li>
+          </ul>
+        </li>
+
+        <!-- ------------------ ALUMNO ------------------------ -->
+        <li dropdown *ngIf="session_info!= null && session_info.obj_tipousuario.data.id == 4 && meta != null">
+            <a href dropdownToggle (click)="false">
+              <i class="fa fa-icon-list-alt"></i>Alumno<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header">Gestión sanitaria</li>
+                <li [ngClass]="{ 'active': isActive('/paciente/4/plist')}"><a [routerLink]="['/paciente/4/plist/1/10']"> <i fa class="fas fa-user"></i> {{meta.paciente.PluralDescription}}</a></li>
+            </ul>
+        </li>
 
 
-      <!------------
-          //---------- USUARIO ------
-          ----------------- -->
+
+      </ul> <!-- Fin de la zona del menú según tipouser -->
+
+
+      <!-- ------------ USUARIO ---------------- -->
 
       <ul class="nav navbar-nav navbar-right">
-        <!-- <li class="active"><a [routerLink]="['./">Fixed top <span class="sr-only">(current)</span></a></li> -->
         <li dropdown>
           <a href dropdownToggle (click)="false">
             <i fa class="fa fa-user"></i>
-            <!-- <span id="username_id" *ngIf="isSessionActive"> {{ session_info.nombre + ' ' + session_info.primer_apellido + ' ' + session_info.segundo_apellido}} ({{ session_info.obj_tipousuario.data.descripcion}})</span> -->
+            <span id="username_id" *ngIf="isSessionActive"> {{ session_info.nombrecompleto}} ({{ session_info.obj_tipousuario.data.descripcion}})</span>
             <b class="caret"></b>
           </a>
           <ul class="dropdown-menu dropdown">
-            <li >
+            <li *ngIf="!isSessionActive">
               <a [routerLink]="['/login']">
                 <i fa class="fa fa-fw fa-user"></i> Login</a>
             </li>
-            <li >
-              <a [routerLink]="['profile']">
+            <li *ngIf="isSessionActive">
+              <a [routerLink]="['/profile']">
                 <i fa class="fa fa-fw fa-user"></i> Perfil de usuario</a>
             </li>
             <!--
@@ -70,10 +144,11 @@
               <a [routerLink]="['passchange']">
                 <i fa class="fa fa-fw fa-key"></i> Cambio de contraseña</a>
             </li>
-            <li  class="divider"></li>
-            <li  id="broth_logout">
+            <li *ngIf="isSessionActive" class="divider"></li>
+            <li *ngIf="isSessionActive" id="broth_logout">
               <a [routerLink]="['/logout']">
-                <i fa class="fa fa-fw fa-power-off"></i> Log Out</a>
+                <i fa class="fa fa-fw fa-power-off"></i> Log Out
+              </a>
             </li>
           </ul>
         </li>

@@ -30,7 +30,6 @@ export class LogoutComponent implements OnInit {
               this.isSessionActive = this.sessionService.isSessionActive();
               this.status = 'Has salido del sistema';
               this.router.navigate(['home']);
-              // $location.path('home');
           } else {
               status = 'Error en la recepción de datos del servidor';
           }

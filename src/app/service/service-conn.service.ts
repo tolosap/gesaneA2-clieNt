@@ -236,7 +236,7 @@ export class ServiceConnService {
     }
   }
 
-  getAllObjectsMetaData(): Observable<any> {
+  getAllObjectsMetaData() {
     return this.connection.get(
       this.constantService.getAppUrl() + '?ob=usuario&op=getallobjectsmetadata',
       { withCredentials: true }
