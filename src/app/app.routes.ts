@@ -82,6 +82,24 @@ import { Episodioremove1Component } from './componentApp/episodio/1/episodioremo
 import { Episodioplist1Component } from './componentApp/episodio/1/episodioplist1/episodioplist1.component';
 import { Episodionew1Component } from './componentApp/episodio/1/episodionew1/episodionew1.component';
 import { Episodioedit1Component } from './componentApp/episodio/1/episodioedit1/episodioedit1.component';
+import { Especialidadplist1Component } from './componentApp/especialidad/1/especialidadplist1/especialidadplist1.component';
+import { Especialidadview1Component } from './componentApp/especialidad/1/especialidadview1/especialidadview1.component';
+import { Especialidadremove1Component } from './componentApp/especialidad/1/especialidadremove1/especialidadremove1.component';
+import { Facturaplist1Component } from './componentApp/factura/1/facturaplist1/facturaplist1.component';
+import { Facturaview1Component } from './componentApp/factura/1/facturaview1/facturaview1.component';
+import { Facturaremove1Component } from './componentApp/factura/1/facturaremove1/facturaremove1.component';
+import { Medicoplist1Component } from './componentApp/medico/1/medicoplist1/medicoplist1.component';
+import { Medicoview1Component } from './componentApp/medico/1/medicoview1/medicoview1.component';
+import { Medicoremove1Component } from './componentApp/medico/1/medicoremove1/medicoremove1.component';
+// tslint:disable-next-line:max-line-length
+import { Modalidadepisodioplist1Component } from './componentApp/modalidadepisodio/1/modalidadepisodioplist1/modalidadepisodioplist1.component';
+// tslint:disable-next-line:max-line-length
+import { Modalidadepisodioview1Component } from './componentApp/modalidadepisodio/1/modalidadepisodioview1/modalidadepisodioview1.component';
+// tslint:disable-next-line:max-line-length
+import { Modalidadepisodioremove1Component } from './componentApp/modalidadepisodio/1/modalidadepisodioremove1/modalidadepisodioremove1.component';
+import { Servicioplist1Component } from './componentApp/servicio/1/servicioplist1/servicioplist1.component';
+import { Servicioview1Component } from './componentApp/servicio/1/servicioview1/servicioview1.component';
+import { Servicioremove1Component } from './componentApp/servicio/1/servicioremove1/servicioremove1.component';
 
 
 export const app_routes: Routes = [
@@ -162,10 +180,39 @@ export const app_routes: Routes = [
     { path: 'episodio/1/remove/:id', component: Episodioremove1Component},
     // { path: 'paciente/1/edit/:id', component: Tipousuarioedit1Component},
     // { path: 'paciente/1/new', component: Gruponew1Component},
+    // ----------------ESPECIALIDAD-----------------
+    { path: 'especialidad/1/plist/:page/:rpp', component: Especialidadplist1Component},
+    { path: 'especialidad/1/view/:id', component: Especialidadview1Component},
+    { path: 'especialidad/1/remove/:id', component: Especialidadremove1Component},
+    // { path: 'paciente/1/edit/:id', component: Tipousuarioedit1Component},
+    // { path: 'paciente/1/new', component: Gruponew1Component},
+    // ----------------FACTURA-----------------
+    { path: 'factura/1/plist/:page/:rpp', component: Facturaplist1Component},
+    { path: 'factura/1/view/:id', component: Facturaview1Component},
+    { path: 'factura/1/remove/:id', component: Facturaremove1Component},
+    // { path: 'paciente/1/edit/:id', component: Tipousuarioedit1Component},
+    // { path: 'paciente/1/new', component: Gruponew1Component},
+    // ----------------MEDICO-----------------
+    { path: 'medico/1/plist/:page/:rpp', component: Medicoplist1Component},
+    { path: 'medico/1/view/:id', component: Medicoview1Component},
+    { path: 'medico/1/remove/:id', component: Medicoremove1Component},
+    // { path: 'paciente/1/edit/:id', component: Tipousuarioedit1Component},
+    // { path: 'paciente/1/new', component: Gruponew1Component},
+    // ----------------MODALIDAD EPISODIO-----------------
+    { path: 'modalidadepisodio/1/plist/:page/:rpp', component: Modalidadepisodioplist1Component},
+    { path: 'modalidadepisodio/1/view/:id', component: Modalidadepisodioview1Component},
+    { path: 'modalidadepisodio/1/remove/:id', component: Modalidadepisodioremove1Component},
+    // { path: 'paciente/1/edit/:id', component: Tipousuarioedit1Component},
+    // { path: 'paciente/1/new', component: Gruponew1Component},
+    // ----------------SERVICIO-----------------
+    { path: 'servicio/1/plist/:page/:rpp', component: Servicioplist1Component},
+    { path: 'servicio/1/view/:id', component: Servicioview1Component},
+    { path: 'servicio/1/remove/:id', component: Servicioremove1Component},
+    // { path: 'paciente/1/edit/:id', component: Tipousuarioedit1Component},
+    // { path: 'paciente/1/new', component: Gruponew1Component},
 
 
-    /*{ path: '/logout', component: LogoutComponent },
-    { path: '/passchange', component: PasschangeComponent },*/
+    // { path: '/passchange', component: PasschangeComponent },
     { path: '**', pathMatch: 'full', redirectTo: '/home' },
 ];
 

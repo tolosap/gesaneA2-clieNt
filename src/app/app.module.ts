@@ -97,6 +97,56 @@ import { Episodionew1Component } from './componentApp/episodio/1/episodionew1/ep
 import { Episodioview1Component } from './componentApp/episodio/1/episodioview1/episodioview1.component';
 import { Episodioremove1Component } from './componentApp/episodio/1/episodioremove1/episodioremove1.component';
 import { Episodioedit1Component } from './componentApp/episodio/1/episodioedit1/episodioedit1.component';
+import { Especialidadplist1Component } from './componentApp/especialidad/1/especialidadplist1/especialidadplist1.component';
+import { Especialidadnew1Component } from './componentApp/especialidad/1/especialidadnew1/especialidadnew1.component';
+import { Especialidadview1Component } from './componentApp/especialidad/1/especialidadview1/especialidadview1.component';
+import { Especialidadremove1Component } from './componentApp/especialidad/1/especialidadremove1/especialidadremove1.component';
+import { Especialidadedit1Component } from './componentApp/especialidad/1/especialidadedit1/especialidadedit1.component';
+import { Facturaview1Component } from './componentApp/factura/1/facturaview1/facturaview1.component';
+import { Facturaplist1Component } from './componentApp/factura/1/facturaplist1/facturaplist1.component';
+import { Facturaremove1Component } from './componentApp/factura/1/facturaremove1/facturaremove1.component';
+import { Facturaedit1Component } from './componentApp/factura/1/facturaedit1/facturaedit1.component';
+import { Facturanew1Component } from './componentApp/factura/1/facturanew1/facturanew1.component';
+import { Medicoview1Component } from './componentApp/medico/1/medicoview1/medicoview1.component';
+import { Medicoplist1Component } from './componentApp/medico/1/medicoplist1/medicoplist1.component';
+import { Medicoremove1Component } from './componentApp/medico/1/medicoremove1/medicoremove1.component';
+import { Medicoedit1Component } from './componentApp/medico/1/medicoedit1/medicoedit1.component';
+import { Mediconew1Component } from './componentApp/medico/1/mediconew1/mediconew1.component';
+import { Modalidadepisodionew1Component } from './componentApp/modalidadepisodio/1/modalidadepisodionew1/modalidadepisodionew1.component';
+import { Modalidadepisodioplist1Component } from './componentApp/modalidadepisodio/1/modalidadepisodioplist1/modalidadepisodioplist1.component';
+import { Modalidadepisodioedit1Component } from './componentApp/modalidadepisodio/1/modalidadepisodioedit1/modalidadepisodioedit1.component';
+import { Modalidadepisodioremove1Component } from './componentApp/modalidadepisodio/1/modalidadepisodioremove1/modalidadepisodioremove1.component';
+import { Modalidadepisodioview1Component } from './componentApp/modalidadepisodio/1/modalidadepisodioview1/modalidadepisodioview1.component';
+import { Servicioedit1Component } from './componentApp/servicio/1/servicioedit1/servicioedit1.component';
+import { Servicioview1Component } from './componentApp/servicio/1/servicioview1/servicioview1.component';
+import { Servicioplist1Component } from './componentApp/servicio/1/servicioplist1/servicioplist1.component';
+import { Servicionew1Component } from './componentApp/servicio/1/servicionew1/servicionew1.component';
+import { Servicioremove1Component } from './componentApp/servicio/1/servicioremove1/servicioremove1.component';
+import { Sexonew1Component } from './componentApp/sexo/1/sexonew1/sexonew1.component';
+import { Sexoedit1Component } from './componentApp/sexo/1/sexoedit1/sexoedit1.component';
+import { Sexoview1Component } from './componentApp/sexo/1/sexoview1/sexoview1.component';
+import { Sexoplist1Component } from './componentApp/sexo/1/sexoplist1/sexoplist1.component';
+import { Sexoremove1Component } from './componentApp/sexo/1/sexoremove1/sexoremove1.component';
+import { Tipodependenciaview1Component } from './componentApp/tipodependencia/1/tipodependenciaview1/tipodependenciaview1.component';
+import { Tipodependenciaedit1Component } from './componentApp/tipodependencia/1/tipodependenciaedit1/tipodependenciaedit1.component';
+import { Tipodependencianew1Component } from './componentApp/tipodependencia/1/tipodependencianew1/tipodependencianew1.component';
+import { Tipodependenciaremove1Component } from './componentApp/tipodependencia/1/tipodependenciaremove1/tipodependenciaremove1.component';
+import { Tipodependenciaplist1Component } from './componentApp/tipodependencia/1/tipodependenciaplist1/tipodependenciaplist1.component';
+import { Tipoepisodionew1Component } from './componentApp/tipoepisodio/1/tipoepisodionew1/tipoepisodionew1.component';
+import { Tipoepisodioedit1Component } from './componentApp/tipoepisodio/1/tipoepisodioedit1/tipoepisodioedit1.component';
+import { Tipoepisodioview1Component } from './componentApp/tipoepisodio/1/tipoepisodioview1/tipoepisodioview1.component';
+import { Tipoepisodioremove1Component } from './componentApp/tipoepisodio/1/tipoepisodioremove1/tipoepisodioremove1.component';
+import { Tipoepisodioplist1Component } from './componentApp/tipoepisodio/1/tipoepisodioplist1/tipoepisodioplist1.component';
+import { Tipopagonew1Component } from './componentApp/tipopago/1/tipopagonew1/tipopagonew1.component';
+import { Tipopagoedit1Component } from './componentApp/tipopago/1/tipopagoedit1/tipopagoedit1.component';
+import { Tipopagoview1Component } from './componentApp/tipopago/1/tipopagoview1/tipopagoview1.component';
+import { Tipopagoplist1Component } from './componentApp/tipopago/1/tipopagoplist1/tipopagoplist1.component';
+import { Tipopagoremove1Component } from './componentApp/tipopago/1/tipopagoremove1/tipopagoremove1.component';
+import { Tiposervicioedit1Component } from './componentApp/tiposervicio/1/tiposervicioedit1/tiposervicioedit1.component';
+import { Tiposervicioview1Component } from './componentApp/tiposervicio/1/tiposervicioview1/tiposervicioview1.component';
+import { Tiposervicionew1Component } from './componentApp/tiposervicio/1/tiposervicionew1/tiposervicionew1.component';
+import { Tiposervicioplist1Component } from './componentApp/tiposervicio/1/tiposervicioplist1/tiposervicioplist1.component';
+import { Tiposervicioremove1Component } from './componentApp/tiposervicio/1/tiposervicioremove1/tiposervicioremove1.component';
 
 @NgModule({
   declarations: [
@@ -179,7 +229,57 @@ import { Episodioedit1Component } from './componentApp/episodio/1/episodioedit1/
     Episodionew1Component,
     Episodioview1Component,
     Episodioremove1Component,
-    Episodioedit1Component
+    Episodioedit1Component,
+    Especialidadplist1Component,
+    Especialidadnew1Component,
+    Especialidadview1Component,
+    Especialidadremove1Component,
+    Especialidadedit1Component,
+    Facturaview1Component,
+    Facturaplist1Component,
+    Facturaremove1Component,
+    Facturaedit1Component,
+    Facturanew1Component,
+    Medicoview1Component,
+    Medicoplist1Component,
+    Medicoremove1Component,
+    Medicoedit1Component,
+    Mediconew1Component,
+    Modalidadepisodionew1Component,
+    Modalidadepisodioplist1Component,
+    Modalidadepisodioedit1Component,
+    Modalidadepisodioremove1Component,
+    Modalidadepisodioview1Component,
+    Servicioedit1Component,
+    Servicioview1Component,
+    Servicioplist1Component,
+    Servicionew1Component,
+    Servicioremove1Component,
+    Sexonew1Component,
+    Sexoedit1Component,
+    Sexoview1Component,
+    Sexoplist1Component,
+    Sexoremove1Component,
+    Tipodependenciaview1Component,
+    Tipodependenciaedit1Component,
+    Tipodependencianew1Component,
+    Tipodependenciaremove1Component,
+    Tipodependenciaplist1Component,
+    Tipoepisodionew1Component,
+    Tipoepisodioedit1Component,
+    Tipoepisodioview1Component,
+    Tipoepisodioremove1Component,
+    Tipoepisodioplist1Component,
+    Tipopagonew1Component,
+    Tipopagoedit1Component,
+    Tipopagoview1Component,
+    Tipopagoplist1Component,
+    Tipopagoremove1Component,
+    Tiposervicioedit1Component,
+    Tiposervicioview1Component,
+    Tiposervicionew1Component,
+    Tiposervicioplist1Component,
+    Tiposervicioremove1Component
   ],
   imports: [
     HttpClientModule,
