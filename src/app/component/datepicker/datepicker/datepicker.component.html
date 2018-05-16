@@ -1,0 +1,10 @@
+<input type="text"
+      [(ngModel)]="model"
+      class="form-control"
+      (ngModelChange)="change()"
+      [required]="required"
+      placeholder="dd/mm/aaaa HH:mm"
+      name="{{name}}"
+      jqdatepicker />
+<!-- <small>{{ model | fechaFormateada : 'EEEE, dd \'de\' MMMM \'de\' yyyy' }}</small> -->
+<small>{{ model }}</small>

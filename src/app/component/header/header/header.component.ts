@@ -14,15 +14,17 @@ export class HeaderComponent implements OnInit {
   status;
   meta;
   isdataavailable = false;
+  interm;
 
   constructor(private serverCallService: ServiceConnService) { }
 
   ngOnInit() {
     this.serverCallService.getAllObjectsMetaData().subscribe( response => {
-      if (response.status === 200) {
-          if (response.status === 200) {
+      this.interm = response;
+      if (this.interm.status === 200) {
+          if (this.interm.status === 200) {
               this.status = null;
-              this.meta = response.json;
+              this.meta = this.interm.json;
               this.isdataavailable = true;
               console.log('fav' + this.meta[this.ob].Icon);
           } else {

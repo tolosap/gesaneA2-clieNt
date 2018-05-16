@@ -25,18 +25,18 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.isActive();
     this.session_info = this.sessionService.getSessionInfo();
-    console.log('-----Menu info-----');
-    console.log(this.session_info);
+    // console.log('-----Menu info-----');
+    // console.log(this.session_info);
     this.sessmetaObj = this.sessionService.getSessionMetadataObj();
     this.sessmetaProp = this.sessionService.getSessionMetadataProp();
     this.isSessionActive = this.sessionService.isSessionActive();
     if (this.isSessionActive) {
       this.getAllObjMetaData();
     }
-    console.log(this.sessmetaObj);
-    console.log(this.sessmetaProp);
-    console.log('Is Sess active: ' + this.sessionService.isSessionActive());
-    console.log('/////Menu info//////');
+    // console.log(this.sessmetaObj);
+    // console.log(this.sessmetaProp);
+    // console.log('Is Sess active: ' + this.sessionService.isSessionActive());
+    // console.log('/////Menu info//////');
   }
   isActive(viewLocation?) {
     // console.log(viewLocation);
@@ -48,7 +48,7 @@ export class MenuComponent implements OnInit {
       if (this.interm.status === 200) {
             this.status = null;
             this.meta = this.interm.json;
-            console.log(this.interm);
+            // console.log(this.interm);
       } else {
         this.status = 'Error en la recepción de datos del servidor';
       }

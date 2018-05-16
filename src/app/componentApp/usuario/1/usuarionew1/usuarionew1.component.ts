@@ -38,13 +38,15 @@ export class Usuarionew1Component implements OnInit {
   getMeta() {
     this.serverCallService.getMeta(this.ob).subscribe(response => {
       this.variable = response;
+      console.log(this.variable);
       if (this.variable.status === 200) {
         this.status = null;
         // --For every foreign key create obj inside bean tobe filled...
         this.variable.json.metaProperties.forEach(function(property) {
           if (property.Type === 'ForeignObject') {
-            console.log(this.bean);
-            this.bean[property.Name] = {};
+            console.log('Dentro');
+            // console.log(this.bean);
+            // this.bean[property.Name] = {};
             // this.bean[property.Name].data = {};
             // this.bean[property.Name].data.id = 0;
           }

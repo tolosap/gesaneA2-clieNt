@@ -1,50 +1,50 @@
 <app-menu></app-menu>
 <!--<div id="wrapper" ng-cloak>-->
 <div id="wrapper">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-default">
-                     <div class="panel-heading">
-                       <app-header [ob]="ob" [op]="op"></app-header>
-                    </div> 
-                    <div class="panel-body">
-                        <div class="row" *ngIf="linkedbean || linkedbean2 || linkedbean3">
-                            <div class="col-xs-12">
-                                <div class="alert alert-info" role="alert">
-                                    <h3 *ngIf="linkedbean" class="bg-info">
-                                        <a href="{{linkedbean.metaObject.TableName}}/profile/view/{{linkedbean.data.id}}">
-                                            <span class="{{linkedbean.metaObject.Icon}}"></span> {{linkedbean.metaObject.SingularDescription}}: {{linkedbean|GetForeignDescription}}</a>
-                                    </h3>
-                                    <h3 *ngIf="linkedbean2" class="bg-info">
-                                        <a href="{{linkedbean2.metaObject.TableName}}/profile/view/{{linkedbean2.data.id}}">
-                                            <span class="{{linkedbean2.metaObject.Icon}}"></span> {{linkedbean2.metaObject.SingularDescription}}: {{linkedbean2|GetForeignDescription}}</a>
-                                    </h3>
-                                    <h3 *ngIf="linkedbean3" class="bg-info">
-                                        <a href="{{linkedbean3.metaObject.TableName}}/profile/view/{{linkedbean3.data.id}}">
-                                            <span class="{{linkedbean3.metaObject.Icon}}"></span> {{linkedbean3.metaObject.SingularDescription}}: {{linkedbean3|GetForeignDescription}}</a>
-                                    </h3>
-                                    <h3 *ngIf="linkedbean4" class="bg-info">
-                                        <a href="{{linkedbean4.metaObject.TableName}}/profile/view/{{linkedbean4.data.id}}">
-                                            <span class="{{linkedbean4.metaObject.Icon}}"></span> {{linkedbean4.metaObject.SingularDescription}}: {{linkedbean4|GetForeignDescription}}</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12" *ngIf="status">
-                                <div class="alert alert-danger" role="alert">
-                                    <h3 class="bg-danger">{{status}}</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12" *ngIf="!status">
-                                <!-- <div class="navbar-form navbar-right">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <app-header [ob]="ob" [op]="op"></app-header>
+          </div>
+          <div class="panel-body">
+            <div class="row" *ngIf="linkedbean || linkedbean2 || linkedbean3 || linkedbean4">
+              <div class="col-xs-12">
+                <div class="alert alert-info" role="alert">
+                  <h3 *ngIf="linkedbean" class="bg-info">
+                    <a href="{{linkedbean.metaObject.TableName}}/{{profile}}/view/{{linkedbean.data.id}}">
+                      <span class="{{linkedbean.metaObject.Icon}}"></span> {{linkedbean.metaObject.SingularDescription}}: {{linkedbean|GetForeignDescription}}</a>
+                  </h3>
+                  <h3 *ngIf="linkedbean2" class="bg-info">
+                    <a href="{{linkedbean2.metaObject.TableName}}/{{profile}}/view/{{linkedbean2.data.id}}">
+                      <span class="{{linkedbean2.metaObject.Icon}}"></span> {{linkedbean2.metaObject.SingularDescription}}: {{linkedbean2|GetForeignDescription}}</a>
+                  </h3>
+                  <h3 *ngIf="linkedbean3" class="bg-info">
+                    <a href="{{linkedbean3.metaObject.TableName}}/{{profile}}/view/{{linkedbean3.data.id}}">
+                      <span class="{{linkedbean3.metaObject.Icon}}"></span> {{linkedbean3.metaObject.SingularDescription}}: {{linkedbean3|GetForeignDescription}}</a>
+                  </h3>
+                  <h3 *ngIf="linkedbean4" class="bg-info">
+                    <a href="{{linkedbean4.metaObject.TableName}}/{{profile}}/view/{{linkedbean4.data.id}}">
+                      <span class="{{linkedbean4.metaObject.Icon}}"></span> {{linkedbean4.metaObject.SingularDescription}}: {{linkedbean4|GetForeignDescription}}</a>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12" *ngIf="status">
+                <div class="alert alert-danger" role="alert">
+                  <h3 class="bg-danger">{{status}}</h3>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12" *ngIf="!status">
+                <!-- <div class="navbar-form navbar-right">
                                     <a class="btn btn-default btn-xs" href="home">Cerrar</a>
                                     <a class="btn btn-default btn-xs" (click)="back()">Volver</a>
                                 </div> -->
-                                <!-- <div role="tabpanel">
+                <!-- <div role="tabpanel">
                                     <ul class="nav nav-tabs" role="tablist">
                                         <li role="presentation" class="active">
                                             <a data-target="#pane0" aria-controls="pane0" role="tab" data-toggle="tab" aria-expanded="false">Consulta</a>
@@ -149,148 +149,148 @@
                                         </div>
                                     </div>
                                 </div> -->
-                                <div>
-                                    <tabset>
-                                        <tab heading="Consulta" id="tab1">
-                                            <div role="tabpanel" id="pane0" class="tab-pane fade active in">
-                                                <p></p>
-                                                <div class="row">
-                                                    <div class="col-lg-3 col-md-3 col-sm-12">
-                                                        <app-cplistinfo [url]="url" [numpage]="numpage" [rpp]="rpp" [registers]="registers" [orderparams]="orderParams" [filterparams]="filterParams"
-                                                            [searchtext]="searchText"></app-cplistinfo>
-                                                    </div>
-                                                    <div class="col-lg-6  col-md-6 col-sm-8 text-center">
-                                                        <app-cplistpagination [url]="url" [numpage]="numpage" [rpp]="rpp" [pages]="pages" [neighbourhood]="neighbourhood" [filterparams]="filterParams"
-                                                            [orderparams]="orderParams" [sfilterparams]="sfilterParams"></app-cplistpagination>
-                                                    </div>
-                                                    <div class="col-lg-3  col-md-3 col-sm-4 text-center">
-                                                        <app-cplistrpp [url]="url" [numpage]="numpage" [rpp]="rpp" [filterparams]="filterParams" [orderparams]="orderParams"></app-cplistrpp>
-                                                    </div>
-                                                </div>
-                                                <p></p>
-                                            </div>
-                                        </tab>
-                                        <tab heading="Nuevo">
-                                            <div class="row">
-                                                <div class="col-md-12 text-center">
-                                                    <p>
-                                                        <br>
-                                                        <a class="btn btn-primary" *ngIf="xob" href="{{ob}}/{{profile}}/x{{xob}}/newx/{{xid}}">Crear</a>
-                                                        <a class="btn btn-primary" *ngIf="!xob" href="{{ob}}/{{profile}}/new">Crear</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </tab>
-                                    </tabset>
-                                </div>
+                <div>
+                  <tabset>
+                    <tab heading="Consulta" id="tab1">
+                      <div role="tabpanel" id="pane0" class="tab-pane fade active in">
+                        <p></p>
+                        <div class="row">
+                          <div class="col-lg-3 col-md-3 col-sm-12">
+                            <app-cplistinfo [url]="url" [numpage]="numpage" [rpp]="rpp" [registers]="registers" [orderparams]="orderParams" [filterparams]="filterParams"
+                              [searchtext]="searchText"></app-cplistinfo>
+                          </div>
+                          <div class="col-lg-6  col-md-6 col-sm-8 text-center">
+                            <app-cplistpagination [url]="url" [numpage]="numpage" [rpp]="rpp" [pages]="pages" [neighbourhood]="neighbourhood" [filterparams]="filterParams"
+                              [orderparams]="orderParams" [sfilterparams]="sfilterParams"></app-cplistpagination>
+                          </div>
+                          <div class="col-lg-3  col-md-3 col-sm-4 text-center">
+                            <app-cplistrpp [url]="url" [numpage]="numpage" [rpp]="rpp" [filterparams]="filterParams" [orderparams]="orderParams"></app-cplistrpp>
+                          </div>
+                        </div>
+                        <p></p>
+                      </div>
+                    </tab>
+                    <tab heading="Nuevo">
+                      <div class="row">
+                        <div class="col-md-12 text-center">
+                          <p>
+                            <br>
+                            <a class="btn btn-primary" *ngIf="xob" href="{{ob}}/{{profile}}/x{{xob}}/newx/{{xid}}">Crear</a>
+                            <a class="btn btn-primary" *ngIf="!xob" href="{{ob}}/{{profile}}/new">Crear</a>
+                          </p>
+                        </div>
+                      </div>
+                    </tab>
+                  </tabset>
+                </div>
 
-                                <div id="datos" *ngIf="!status">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <div class="text-center">
-                                                <app-cplistvisiblefields [fields]="metap"></app-cplistvisiblefields>
-                                            </div>
-                                        </div>
-                                        <table class="table table-responsive table-bordered table-hover table-striped table-condensed dataTable no-footer">
-                                            <!--<thead>
+                <div id="datos" *ngIf="!status">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <div class="text-center">
+                        <app-cplistvisiblefields [fields]="metap"></app-cplistvisiblefields>
+                      </div>
+                    </div>
+                    <table class="table table-responsive table-bordered table-hover table-striped table-condensed dataTable no-footer">
+                      <!--<thead>
                                                     <tr>
                                                 <app-plistheader [url]="url" [numpage]="numpage" [rpp]="rpp" [filterparams]="filterParams" [metap]="metap"></app-plistheader>
                                             </tr>
                                             </thead>-->
-                                            <thead app-plistheader [url]="url" [numpage]="numpage" [rpp]="rpp" [filterparams]="filterParams" [metap]="metap">-->
-                                                <tbody>
-                                                    <tr *ngFor="let oBean of pages2">
-                                                        <ng-container *ngFor="let oMetap of metap">
-                                                            <td *ngIf="oMetap.IsVisible && oMetap.Type == 'Id'" class="text-right col-md-1">
-                                                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'Id'">
-                                                                    <b>{{oBean[oMetap.Name]}}</b>
-                                                                </div>
-                                                            </td>
-                                                        </ng-container>
-                                                        <ng-container *ngFor="let oMetap of metap">
-                                                            <td *ngIf="oMetap.IsVisible && oMetap.Type != 'Id'" class="text-right">
-                                                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'Date'" class="text-center">
-                                                                    <span fa class="fa fa-calendar">&nbsp;</span>{{oBean[oMetap.Name]}}</div>
-                                                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'Integer'" class="text-center">{{oBean[oMetap.Name]}}</div>
-                                                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'Decimal'" class="text-center">{{oBean[oMetap.Name]}}</div>
-                                                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'String'" class="text-left">{{oBean[oMetap.Name] |ClipString}}</div>
-                                                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'Calculated'" class="text-left">{{oBean[oMetap.Name |ClipString]}}</div>
-                                                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'Boolean'" class="text-center" [innerHTML]="oBean[oMetap.Name]|Booleanize"></div>
-                                                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'ForeignObject'" class="text-left">
-                                                                    <span *ngIf="oBean[oMetap.Name].data.id > 0" class="{{oBean[oMetap.Name].metaObject.Icon}}"></span>
-                                                                    <a href="{{oMetap.References}}/{{profile}}/view/{{oBean[oMetap.Name].data.id}}">{{oBean[oMetap.Name] | GetForeignDescription}}</a>
-                                                                </div>
-                                                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'Link'" class="text-center">
-                                                                    <a *ngIf="oBean[oMetap.Name] > 0" class="btn btn-default btn-xs" href="{{oMetap.References}}/{{profile}}/x{{ob}}/plistx/{{oBean['id']}}">{{setShowRemove(false)}} {{oBean[oMetap.Name]}}</a>
-                                                                    <a *ngIf="oBean[oMetap.Name] == 0" class="btn btn-default btn-xs" href="{{oMetap.References}}/{{profile}}/x{{ob}}/newx/{{oBean['id']}}">{{setShowRemove(true)}} {{oBean[oMetap.Name]}}</a>
-                                                                </div>
-                                                            </td>
-                                                        </ng-container>
-                                                        <td *ngIf="!xob && !onlyview && !veredit" class="col-md-1">
-                                                            <div class="btn-toolbar" role="toolbar">
-                                                                <div class="btn-group">
-                                                                    <a class="btn btn-default btn-xs" title="View" href="{{ob}}/{{profile}}/view/{{oBean.id}}">
-                                                                        <span class="glyphicon glyphicon-eye-open"></span>
-                                                                    </a>
-                                                                    <a class="btn btn-default btn-xs" title="Edit" href="{{ob}}/{{profile}}/edit/{{oBean.id}}">
-                                                                        <span class="glyphicon glyphicon-pencil"></span>
-                                                                    </a>
-                                                                    <a *ngIf="showRemove" class="btn btn-default btn-xs" title="Remove" href="{{ob}}/{{profile}}/remove/{{oBean.id}}">
-                                                                        <span class="glyphicon glyphicon-remove"></span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td *ngIf="!onlyview && veredit" class="col-md-1">
-                                                            <div class="btn-toolbar" role="toolbar">
-                                                                <div class="btn-group">
-                                                                    <a class="btn btn-default btn-xs" title="View" href="{{ob}}/{{profile}}/view/{{oBean.id}}">
-                                                                        <span class="glyphicon glyphicon-eye-open"></span>
-                                                                    </a>
-                                                                    <a *ngIf="showEdit(oBean); idseve" class="btn btn-default btn-xs" title="Edit" href="{{ob}}/{{profile}}/edit/{{oBean.id}}">
-                                                                        <span class="glyphicon glyphicon-pencil"></span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td *ngIf="!xob && onlyview" class="col-md-1">
-                                                            <div class="btn-toolbar" role="toolbar">
-                                                                <div class="btn-group">
-                                                                    <a class="btn btn-default btn-xs" title="View" href="{{ob}}/{{profile}}/view/{{oBean.id}}">
-                                                                        <span class="glyphicon glyphicon-eye-open"></span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td *ngIf="xob && !veredit" class="col-md-1">
-                                                            <div class="btn-toolbar" role="toolbar">
-                                                                <div class="btn-group">
-                                                                    <a class="btn btn-default btn-xs" title="View" href="{{ob}}/{{profile}}/view/{{oBean.id}}">
-                                                                        <span class="glyphicon glyphicon-eye-open"></span>
-                                                                    </a>
-                                                                    <a class="btn btn-default btn-xs" title="Edit" href="{{ob}}/{{profile}}/x{{xob}}/editx/{{oBean.id}}/{{xid}}">
-                                                                        <span class="glyphicon glyphicon-pencil"></span>
-                                                                    </a>
-
-                                                                    <a *ngIf="showRemove" class="btn btn-default btn-xs" title="Remove" href="{{ob}}/{{profile}}/remove/{{oBean.id}}">
-                                                                        <span class="glyphicon glyphicon-remove"></span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                        </table>
-                                    </div>
+                      <thead app-plistheader [url]="url" [numpage]="numpage" [rpp]="rpp" [filterparams]="filterParams" [metap]="metap">-->
+                        <tbody>
+                          <tr *ngFor="let oBean of pages2">
+                            <ng-container *ngFor="let oMetap of metap">
+                              <td *ngIf="oMetap.IsVisible && oMetap.Type == 'Id'" class="text-right col-md-1">
+                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'Id'">
+                                  <b>{{oBean[oMetap.Name]}}</b>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-footer" style="font-family: Questrial, serif;">
-                        <footer></footer>
-                    </div>
+                              </td>
+                            </ng-container>
+                            <ng-container *ngFor="let oMetap of metap">
+                              <td *ngIf="oMetap.IsVisible && oMetap.Type != 'Id'" class="text-right">
+                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'Date'" class="text-center">
+                                  <span fa class="fa fa-calendar">&nbsp;</span>{{oBean[oMetap.Name]}}</div>
+                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'Integer'" class="text-center">{{oBean[oMetap.Name]}}</div>
+                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'Decimal'" class="text-center">{{oBean[oMetap.Name]}}</div>
+                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'String'" class="text-left">{{oBean[oMetap.Name] |ClipString}}</div>
+                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'Calculated'" class="text-left">{{oBean[oMetap.Name |ClipString]}}</div>
+                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'Boolean'" class="text-center" [innerHTML]="oBean[oMetap.Name]|Booleanize"></div>
+                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'ForeignObject'" class="text-left">
+                                  <span *ngIf="oBean[oMetap.Name].data.id > 0" class="{{oBean[oMetap.Name].metaObject.Icon}}"></span>
+                                  <a href="{{oMetap.References}}/{{profile}}/view/{{oBean[oMetap.Name].data.id}}">{{oBean[oMetap.Name] | GetForeignDescription}}</a>
+                                </div>
+                                <div *ngIf="oMetap.IsVisible && oMetap.Type == 'Link'" class="text-center">
+                                  <a *ngIf="oBean[oMetap.Name] > 0" class="btn btn-default btn-xs" href="{{oMetap.References}}/{{profile}}/x{{ob}}/plistx/{{oBean['id']}}/1/10">{{setShowRemove(false)}} {{oBean[oMetap.Name]}}</a>
+                                  <a *ngIf="oBean[oMetap.Name] == 0" class="btn btn-default btn-xs" href="{{oMetap.References}}/{{profile}}/x{{ob}}/newx/{{oBean['id']}}">{{setShowRemove(true)}} {{oBean[oMetap.Name]}}</a>
+                                </div>
+                              </td>
+                            </ng-container>
+                            <td *ngIf="!xob && !onlyview && !veredit" class="col-md-1">
+                              <div class="btn-toolbar" role="toolbar">
+                                <div class="btn-group">
+                                  <a class="btn btn-default btn-xs" title="View" href="{{ob}}/{{profile}}/view/{{oBean.id}}">
+                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                  </a>
+                                  <a class="btn btn-default btn-xs" title="Edit" href="{{ob}}/{{profile}}/edit/{{oBean.id}}">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                  </a>
+                                  <a *ngIf="showRemove" class="btn btn-default btn-xs" title="Remove" href="{{ob}}/{{profile}}/remove/{{oBean.id}}">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                  </a>
+                                </div>
+                              </div>
+                            </td>
+                            <td *ngIf="!onlyview && veredit" class="col-md-1">
+                              <div class="btn-toolbar" role="toolbar">
+                                <div class="btn-group">
+                                  <a class="btn btn-default btn-xs" title="View" href="{{ob}}/{{profile}}/view/{{oBean.id}}">
+                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                  </a>
+                                  <a *ngIf="showEdit(oBean); idseve" class="btn btn-default btn-xs" title="Edit" href="{{ob}}/{{profile}}/edit/{{oBean.id}}">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                  </a>
+                                </div>
+                              </div>
+                            </td>
+                            <td *ngIf="!xob && onlyview" class="col-md-1">
+                              <div class="btn-toolbar" role="toolbar">
+                                <div class="btn-group">
+                                  <a class="btn btn-default btn-xs" title="View" href="{{ob}}/{{profile}}/view/{{oBean.id}}">
+                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                  </a>
+                                </div>
+                              </div>
+                            </td>
+                            <td *ngIf="xob && !veredit" class="col-md-1">
+                              <div class="btn-toolbar" role="toolbar">
+                                <div class="btn-group">
+                                  <a class="btn btn-default btn-xs" title="View" href="{{ob}}/{{profile}}/view/{{oBean.id}}">
+                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                  </a>
+                                  <a class="btn btn-default btn-xs" title="Edit" href="{{ob}}/{{profile}}/x{{xob}}/editx/{{oBean.id}}/{{xid}}">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                  </a>
+
+                                  <a *ngIf="showRemove" class="btn btn-default btn-xs" title="Remove" href="{{ob}}/{{profile}}/remove/{{oBean.id}}">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                  </a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
+          <div class="panel-footer" style="font-family: Questrial, serif;">
+            <app-footer></app-footer>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
