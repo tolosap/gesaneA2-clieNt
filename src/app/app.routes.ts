@@ -100,6 +100,9 @@ import { Modalidadepisodioremove1Component } from './componentApp/modalidadepiso
 import { Servicioplist1Component } from './componentApp/servicio/1/servicioplist1/servicioplist1.component';
 import { Servicioview1Component } from './componentApp/servicio/1/servicioview1/servicioview1.component';
 import { Servicioremove1Component } from './componentApp/servicio/1/servicioremove1/servicioremove1.component';
+import { Sexoplist1Component } from './componentApp/sexo/1/sexoplist1/sexoplist1.component';
+import { Sexoview1Component } from './componentApp/sexo/1/sexoview1/sexoview1.component';
+import { Sexoremove1Component } from './componentApp/sexo/1/sexoremove1/sexoremove1.component';
 
 
 export const app_routes: Routes = [
@@ -208,6 +211,12 @@ export const app_routes: Routes = [
     { path: 'servicio/1/plist/:page/:rpp', component: Servicioplist1Component},
     { path: 'servicio/1/view/:id', component: Servicioview1Component},
     { path: 'servicio/1/remove/:id', component: Servicioremove1Component},
+    // { path: 'paciente/1/edit/:id', component: Tipousuarioedit1Component},
+    // { path: 'paciente/1/new', component: Gruponew1Component},
+    // ----------------SEXO-----------------
+    { path: 'sexo/1/plist/:page/:rpp', component: Sexoplist1Component},
+    { path: 'sexo/1/view/:id', component: Sexoview1Component},
+    { path: 'sexo/1/remove/:id', component: Sexoremove1Component},
     // { path: 'paciente/1/edit/:id', component: Tipousuarioedit1Component},
     // { path: 'paciente/1/new', component: Gruponew1Component},
 

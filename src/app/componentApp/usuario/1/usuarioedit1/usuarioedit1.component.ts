@@ -6,7 +6,8 @@ import { ToolService } from '../../../../service/tool.service';
 
 @Component({
   selector: 'app-usuarioedit1',
-  templateUrl: '../../../../shared/aplicaciones/newedit.html',
+  // templateUrl: '../../../../shared/aplicaciones/newedit.html',
+  templateUrl: '../../../../shared/pruebas.html',
   styleUrls: ['./usuarioedit1.component.css']
 })
 export class Usuarioedit1Component implements OnInit {
@@ -17,7 +18,8 @@ export class Usuarioedit1Component implements OnInit {
   id: number;
 
   status = null;
-  debugging = this.constantService.debugging();
+  // debugging = this.constantService.debugging();
+  debugging = 2;
   url = this.ob + '/' + this.profile + '/' + this.op;
 
   variable;

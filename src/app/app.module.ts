@@ -147,6 +147,7 @@ import { Tiposervicioview1Component } from './componentApp/tiposervicio/1/tipose
 import { Tiposervicionew1Component } from './componentApp/tiposervicio/1/tiposervicionew1/tiposervicionew1.component';
 import { Tiposervicioplist1Component } from './componentApp/tiposervicio/1/tiposervicioplist1/tiposervicioplist1.component';
 import { Tiposervicioremove1Component } from './componentApp/tiposervicio/1/tiposervicioremove1/tiposervicioremove1.component';
+import { ClickOutsideDirective } from './directives/clickOutSide.directive';
 
 @NgModule({
   declarations: [
@@ -162,6 +163,7 @@ import { Tiposervicioremove1Component } from './componentApp/tiposervicio/1/tipo
     CplistvisiblefieldsComponent,
     PlistheaderComponent,
     TrueFalseValueDirective,
+    ClickOutsideDirective,
     HeaderComponent,
     GetForeignDescPipe,
     ClipStringPipe,
