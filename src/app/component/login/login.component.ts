@@ -14,6 +14,8 @@ import { SessionServerCallService } from '../../service/session-server-call.serv
 export class LoginComponent implements OnInit {
   // debugging; ACORDARSE DE ACTIVAR ASI
   // debugging = true;
+  ob = 'usuario';
+  op = 'login';
   title = 'Formulario de entrada al sistema';
   icon = 'fa-file-text-o';
   user = { username: '', password: '' };
