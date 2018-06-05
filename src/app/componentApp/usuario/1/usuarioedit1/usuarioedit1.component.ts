@@ -6,8 +6,8 @@ import { ToolService } from '../../../../service/tool.service';
 
 @Component({
   selector: 'app-usuarioedit1',
-  // templateUrl: '../../../../shared/aplicaciones/newedit.html',
-  templateUrl: '../../../../shared/pruebas.html',
+  templateUrl: '../../../../shared/aplicaciones/newedit.html',
+  // templateUrl: '../../../../shared/pruebas.html',
   styleUrls: ['./usuarioedit1.component.css']
 })
 export class Usuarioedit1Component implements OnInit {
@@ -28,6 +28,16 @@ export class Usuarioedit1Component implements OnInit {
   metap;
   bean = {};
   isdataavailable = false;
+
+  // Datetimepicker data
+  date: Date = new Date();
+  settings = {
+      bigBanner: true,
+      timePicker: true,
+      format: 'dd-MM-yyyy HH:mm',
+      defaultOpen: false,
+      closeOnSelect: true
+  };
 
   constructor(
     private serverCallService: ServiceConnService,
@@ -62,15 +72,34 @@ export class Usuarioedit1Component implements OnInit {
   }
 
   save() {
+
+    if (this.bean['activo'] === false) {
+       // tslint:disable-next-line:no-unused-expression
+       this.bean['activo'] = '0';
+    }
+    if (this.bean['activo'] === true) {
+       // tslint:disable-next-line:no-unused-expression
+      this.bean['activo'] = '1';
+    }
+    if (this.bean['validado'] === false) {
+      // tslint:disable-next-line:no-unused-expression
+      this.bean['validado'] = '0';
+    }
+    if (this.bean['validado'] === true) {
+      // tslint:disable-next-line:no-unused-expression
+      this.bean['validado'] = '1';
+    }
+
     const jsonToSend = {
       json: JSON.stringify(this.toolService.array_identificarArray(this.bean))
     };
     this.serverCallService.set(this.ob, jsonToSend).subscribe(response => {
       this.variable2 = response;
-      if (this.variable2.data.status === 200) {
-        this.status =
-          'El registro se ha creado con id=' + this.variable2.data.json;
-        this.bean['id'] = this.variable2.json;
+      if (this.variable2.status === 200) {
+        this.status = 'El registro con id= ' + this.bean['id'] + ' se ha modificado.';
+        // this.status =
+        //   'El registro se ha creado con id=' + this.variable2.json;
+        // this.bean['id'] = this.variable2.json;                        Esto es para el new
       } else {
         this.status = 'Error en la recepción de datos del servidor';
       }

@@ -30,7 +30,7 @@
                 </div>
               </div>
             </div>
-            <form name="outerForm" #outerForm class="form-horizontal text-left" *ngIf="!status">
+            <form name="outerForm" #outerForm="ngForm" class="form-horizontal text-left" *ngIf="!status">
               <div *ngFor="let oMetap of metap">
                 <!--- id ---------------------------------------------->
                 <div *ngIf="oMetap.Type == 'Id'" class="form-group" id="{{oMetap.Name}}-group">
@@ -42,88 +42,74 @@
                     <input type="text" class="form-control" id="{{oMetap.Name}}" name="{{oMetap.Name}}" [(ngModel)]="bean[oMetap.Name]" placeholder="{{oMetap.Description}}"
                       size="15" disabled />
                   </div>
-                  <div class="control col-md-1 alert alert-success" *ngIf="debugging == 2">
-                    pristine:{{outerForm[oMetap.Name]?.pristine}}
-                    <br> required:{{outerForm[oMetap.Name]?.errors.required}}
-                    <br> valid:{{outerForm[oMetap.Name]?.valid}}
-                    <br>
-                  </div>
                 </div>
                 <!-- string ------------------------------------------------>
-                <!-- <div *ngIf="oMetap.Type == 'String' || oMetap.Type == 'Integer' || oMetap.Type == 'Decimal'" class="form-group" id="{{oMetap.Name}}-group"
-                                    [ngClass]="{'has-error':(outerForm[oMetap.Name]?.errors.pattern && !outerForm[oMetap.Name]?.pristine) ||
-                                                            (outerForm[oMetap.Name]?.errors.required && !outerForm[oMetap.Name]?.pristine)}"> -->
-                <div *ngIf="oMetap.Type == 'String' || oMetap.Type == 'Integer' || oMetap.Type == 'Decimal'" class="form-group" id="{{oMetap.Name}}-group">
+                <div *ngIf="oMetap.Type == 'String' || oMetap.Type == 'Integer' || oMetap.Type == 'Decimal'" class="form-group" id="{{oMetap.Name}}-group"
+                                    [ngClass]="{'has-error': (string.errors?.pattern && !string.pristine) ||
+                                                            (string.errors?.required && !string.pristine)}">
                   <label class="control-label col-sm-2" for="{{oMetap.Name}}">
                     <span *ngIf="oMetap.IsRequired">*</span>
                     {{oMetap.LongName}}
                   </label>
                   <div class="control col-md-{{oMetap.Width}}">
-                    <input type="text" class="form-control" id="{{oMetap.Name}}" name="{{oMetap.Name}}" [(ngModel)]="bean[oMetap.Name]" pattern="oMetap.RegexPattern"
-                      placeholder="{{oMetap.Description}}" maxlength="{{oMetap.MaxLength}}" [required]="oMetap.IsRequired"
+                    <input type="text" class="form-control" id="{{oMetap.Name}}" name="{{oMetap.Name}}" [(ngModel)]="bean[oMetap.Name]" pattern="{{oMetap.RegexPattern}}"
+                      placeholder="{{oMetap.Description}}" maxlength="{{oMetap.MaxLength}}" required="{{oMetap.IsRequired}}" #string="ngModel"
                     />
-                    <!-- <span class="help-block" *ngIf="!outerForm[oMetap.Name]?.pristine && outerForm[oMetap.Name]?.errors.required">El campo es obligatorio</span> -->
-                    <!-- <span class="help-block" *ngIf="!outerForm[oMetap.Name]?.pristine && outerForm[oMetap.Name]?.errors.pattern">El campo no tiene formato adecuado: Introduzca {{oMetap.RegexHelp}}</span> -->
+                    <span class="help-block" *ngIf="!string.pristine && string?.errors?.required">El campo es obligatorio</span>
+                    <span class="help-block" *ngIf="!string.pristine && string?.errors?.pattern">El campo no tiene formato adecuado: Introduzca {{oMetap.RegexHelp}}</span>
                   </div>
                   <div class="control col-md-1 alert alert-success" *ngIf="debugging == 2">
-                    pristine:{{outerForm[oMetap.Name]?.pristine}}
-                    <br> required:{{outerForm[oMetap.Name]?.errors.required}}
-                    <br> valid:{{outerForm[oMetap.Name]?.valid}}
+                    pristine:{{string.pristine}}
+                    <br> required:{{string?.errors?.required}}
+                    <br> valid:{{string.valid}}
                     <br>
                   </div>
                 </div>
                 <!-- date ------------------------------------------------>
-                <div *ngIf="oMetap.Type == 'Date'" class="form-group" id="{{oMetap.Name}}-group" [ngClass]="{'has-error': (outerForm[oMetap.Name]?.errors.required || outerForm[oMetap.Name]?.errors.valid) && !outerForm[oMetap.Name]?.pristine}">
+                <div *ngIf="oMetap.Type == 'Date'" class="form-group" id="{{oMetap.Name}}-group" >
                   <label class="control-label col-sm-2" for="{{oMetap.Name}}">
                     <span *ngIf="oMetap.IsRequired">*</span>
                     {{oMetap.LongName}}
                   </label>
                   <div class="control col-md-{{oMetap.Width}}">
-                    <app-datepicker [name]="oMetap.Name" [required]="oMetap.Required" [model]="bean[oMetap.Name]" [form]="outerForm">
-                    </app-datepicker>
+                    <angular2-date-picker [(ngModel)]='date' [settings]='settings' [ngModelOptions]="{standalone: true}"></angular2-date-picker>
                     <span class="help-block" *ngIf="!outerForm[oMetap.Name]?.pristine && outerForm[oMetap.Name]?.errors.required">El campo es obligatorio</span>
-                    <span class="help-block" *ngIf="!outerForm[oMetap.Name]?.pristine && !outerForm[oMetap.Name]?.valid">El campo no tiene formato adecuado: Introduzca {{oMetap.RegexHelp}}</span>
-                  </div>
-                  <div class="control col-md-1 alert alert-success" *ngIf="debugging == 2">
-                    pristine:{{outerForm[oMetap.Name]?.pristine}}
-                    <br> required:{{outerForm[oMetap.Name]?.errors.required}}
-                    <br> valid:{{outerForm[oMetap.Name]?.valid}}
-                    <br>
                   </div>
                 </div>
 
                 <!-- boolean ------------------------------------------------>
-                <div *ngIf="oMetap.Type == 'Boolean'" class="form-group" id="{{oMetap.Name}}-group" [ngClass]="{'has-error': (outerForm[oMetap.Name]?.errors.required || outerForm[oMetap.Name]?.errors.valid) && !outerForm[oMetap.Name]?.pristine}">
+                <div *ngIf="oMetap.Type == 'Boolean'" class="form-group" id="{{oMetap.Name}}-group"
+                [ngClass]="{'has-error': (boolean.valid) && !boolean.pristine}">
                   <label class="control-label col-sm-2" for="{{oMetap.Name}}">
                     <span *ngIf="oMetap.IsRequired">*</span>
                     {{oMetap.LongName}}
                   </label>
                   <div class="control col-md-{{oMetap.Width}}">
                     <input [(ngModel)]="bean[oMetap.Name]" type="checkbox" trueFalseValue trueValue="yes" falseValue="nope" id="{{oMetap.Name}}"
-                      name="{{oMetap.Name}}">
+                      name="{{oMetap.Name}}" #boolean="ngModel">
                   </div>
                   <div class="control col-md-1 alert alert-success" *ngIf="debugging == 2">
-                    pristine:{{outerForm[oMetap.Name]?.pristine}}
-                    <br> required:{{outerForm[oMetap.Name]?.errors.required}}
-                    <br> valid:{{outerForm[oMetap.Name]?.valid}}
+                    pristine:{{boolean.pristine}}
+                    <br> required:{{boolean?.errors?.required}}
+                    <br> valid:{{boolean.valid}}
                     <br>
                   </div>
                 </div>
 
                 <!-- foreign  ------------------------------------------------>
-                <div *ngIf="oMetap.Type == 'ForeignObject'" [hidden]="oMetap.References != xob" class="form-group" id="{{oMetap.Name}}-group"
+                <!-- <div *ngIf="oMetap.Type == 'ForeignObject'" [hidden]="oMetap.References != xob" class="form-group" id="{{oMetap.Name}}-group"
                   [ngClass]="{'has-error': (outerForm[oMetap.Name]?.errors.exists || outerForm[oMetap.Name]?.errors.required) && !outerForm[oMetap.Name]?.pristine}">
                   <label class="control-label col-sm-2" for="{{oMetap.Name}}">
                     <span *ngIf="oMetap.IsRequired">*</span>
                     {{oMetap.LongName}}
                   </label>
-                  <div class="control col-md-{{oMetap.Width}}">
+                  <div class="control col-md-{{oMetap.Width}}"> -->
                     <!-- <foreign-key bean="bean[oMetap.Name].data" form="outerForm" name="oMetap.Name" reference="oMetap.References" profile="profile"
                                             required="oMetap.IsRequired">
                                         </foreign-key> -->
-                    <span class="help-block" *ngIf="!outerForm[oMetap.Name]?.pristine && outerForm[oMetap.Name]?.errors.required">El campo es obligatorio</span>
-                    <span class="help-block" *ngIf="!outerForm[oMetap.Name]?.pristine && outerForm[oMetap.Name]?.errors.exists && !outerForm[oMetap.Name]?.errors.required">La clave elegida no existe</span>
-                  </div>
+                    <!-- <span class="help-block" *ngIf="!outerForm[oMetap.Name]?.pristine && outerForm[oMetap.Name]?.errors.required">El campo es obligatorio</span> -->
+                    <!-- <span class="help-block" *ngIf="!outerForm[oMetap.Name]?.pristine && outerForm[oMetap.Name]?.errors.exists && !outerForm[oMetap.Name]?.errors.required">La clave elegida no existe</span> -->
+                  <!-- </div>
                   <div class="control col-md-1 alert alert-success" *ngIf="debugging == 2">
                     pristine:{{outerForm[oMetap.Name]?.pristine}}
                     <br> required:{{outerForm[oMetap.Name]?.errors.required}}
@@ -131,13 +117,15 @@
                     <br> valid:{{outerForm[oMetap.Name]?.valid}}
                     <br>
                   </div>
-                </div>
+                </div> -->
 
               </div>
 
               <div class="control-group text-right">
                 <div class="controls">
-                  <a class="btn btn-primary" (click)="save()" disabled="!outerForm.dirty || !outerForm.valid">Guardar</a>
+                  <!-- <a class="btn btn-primary" (click)="save()" [disabled]="!outerForm.dirty || !outerForm.valid">Guardar</a> -->
+                  <!-- <button type="submit" class="btn btn-primary" (click)="save()" [disabled]="!outerForm.dirty || !outerForm.valid">Guardar</button> -->
+                  <button type="submit" class="btn btn-primary" (click)="save()" [disabled]="!outerForm.dirty">Guardar</button>
                   <a class="btn btn-info" href="{{ob}}/{{profile}}/plist/1/10">Ir al listado de {{ob}}</a>
                   <a class="btn btn-default" (click)="back()">Volver</a>
                   <a class="btn btn-default" (click)="close()">Cerrar</a>
@@ -177,11 +165,11 @@
                 </div>
               </div>
             </div>
-            <div class="alert alert-success" role="alert" *ngIf="debugging == 2">
+            <!-- <div class="alert alert-success" role="alert" *ngIf="debugging == 2">
               <h4>Debug:</h4>
               BEAN:{{bean|json}}
               <br>
-            </div>
+            </div> -->
           </div>
           <div class="panel-footer" style="font-family: Questrial, serif;">
             <app-footer></app-footer>

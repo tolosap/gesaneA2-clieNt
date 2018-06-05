@@ -103,6 +103,8 @@ import { Servicioremove1Component } from './componentApp/servicio/1/servicioremo
 import { Sexoplist1Component } from './componentApp/sexo/1/sexoplist1/sexoplist1.component';
 import { Sexoview1Component } from './componentApp/sexo/1/sexoview1/sexoview1.component';
 import { Sexoremove1Component } from './componentApp/sexo/1/sexoremove1/sexoremove1.component';
+import { Pacientenew1Component } from './componentApp/paciente/1/pacientenew1/pacientenew1.component';
+import { XpacienteComponent } from './componentApp/episodio/1/xpaciente/xpaciente.component';
 
 
 export const app_routes: Routes = [
@@ -163,7 +165,7 @@ export const app_routes: Routes = [
     { path: 'paciente/1/view/:id', component: Pacienteview1Component},
     { path: 'paciente/1/remove/:id', component: Pacienteremove1Component},
     // { path: 'paciente/1/edit/:id', component: Tipousuarioedit1Component},
-    // { path: 'paciente/1/new', component: Gruponew1Component},
+    { path: 'paciente/1/new', component: Pacientenew1Component},
     // { path: 'paciente/1/xusuario/plistx/:id/:page/:rpp', component: Xusuarioplist1Component},
     // ----------------DEPENDENCIA-----------------
     { path: 'dependencia/1/plist/:page/:rpp', component: Dependenciaplist1Component},
@@ -181,6 +183,7 @@ export const app_routes: Routes = [
     { path: 'episodio/1/plist/:page/:rpp', component: Episodioplist1Component},
     { path: 'episodio/1/view/:id', component: Episodioview1Component},
     { path: 'episodio/1/remove/:id', component: Episodioremove1Component},
+    { path: 'episodio/1/xpaciente/plistx/:id/:page/:rpp', component: XpacienteComponent},
     // { path: 'paciente/1/edit/:id', component: Tipousuarioedit1Component},
     // { path: 'paciente/1/new', component: Gruponew1Component},
     // ----------------ESPECIALIDAD-----------------

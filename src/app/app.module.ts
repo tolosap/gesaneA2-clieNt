@@ -72,6 +72,7 @@ import { Pacienteremove1Component } from './componentApp/paciente/1/pacienteremo
 import { TrueFalseValueDirective } from './directives/true-false-value.directive';
 import { DatepickerComponent } from './component/datepicker/datepicker/datepicker.component';
 import { FechaFormateadaPipe } from './pipes/fechaformateada.pipe';
+// tslint:disable-next-line:max-line-length
 import { Categoriaprofesionaledit1Component } from './componentApp/categoriaprofesional/1/categoriaprofesionaledit1/categoriaprofesionaledit1.component';
 import { Categoriaprofesionalnew1Component } from './componentApp/categoriaprofesional/1/categoriaprofesionalnew1/categoriaprofesionalnew1.component';
 import { Categoriaprofesionalplist1Component } from './componentApp/categoriaprofesional/1/categoriaprofesionalplist1/categoriaprofesionalplist1.component';
@@ -148,6 +149,9 @@ import { Tiposervicionew1Component } from './componentApp/tiposervicio/1/tiposer
 import { Tiposervicioplist1Component } from './componentApp/tiposervicio/1/tiposervicioplist1/tiposervicioplist1.component';
 import { Tiposervicioremove1Component } from './componentApp/tiposervicio/1/tiposervicioremove1/tiposervicioremove1.component';
 import { ClickOutsideDirective } from './directives/clickOutSide.directive';
+import { Pacientenew1Component } from './componentApp/paciente/1/pacientenew1/pacientenew1.component';
+import { XpacienteComponent } from './componentApp/episodio/1/xpaciente/xpaciente.component';
+import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 
 @NgModule({
   declarations: [
@@ -281,7 +285,9 @@ import { ClickOutsideDirective } from './directives/clickOutSide.directive';
     Tiposervicioview1Component,
     Tiposervicionew1Component,
     Tiposervicioplist1Component,
-    Tiposervicioremove1Component
+    Tiposervicioremove1Component,
+    Pacientenew1Component,
+    XpacienteComponent
   ],
   imports: [
     HttpClientModule,
@@ -290,7 +296,8 @@ import { ClickOutsideDirective } from './directives/clickOutSide.directive';
     BsDropdownModule.forRoot(app_routes),
     FormsModule,
     TabsModule.forRoot(),
-    Angular2FontawesomeModule
+    Angular2FontawesomeModule,
+    AngularDateTimePickerModule
   ],
   providers: [
     ServiceConnService,
