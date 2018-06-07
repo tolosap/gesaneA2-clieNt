@@ -164,4 +164,20 @@ export class ToolService {
     delete bean[obj];
     return bean;
   }
+
+  booleanTo1or0(bean) {
+    if (bean['activo'] === false) {
+    bean['activo'] = '0';
+   }
+   if (bean['activo'] === true) {
+    bean['activo'] = '1';
+   }
+   if (bean['validado'] === false) {
+    bean['validado'] = '0';
+   }
+   if (bean['validado'] === true) {
+    bean['validado'] = '1';
+   }
+   return bean;
+  }
 }

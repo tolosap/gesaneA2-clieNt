@@ -88,6 +88,7 @@ export class LoginComponent implements OnInit {
           this.sessionService.setSessionMetadataProp(this.interm.json.metaProperties);
           this.sessionService.setSessionMetadataObj(this.interm.json.metaObject);
           this.sessionService.setSessionInfo(this.interm.json.data);
+          this.sessionService.setSessionProfile(this.interm.json.data.obj_tipousuario.data.id);
           this.session_info = this.sessionService.getSessionInfo();
           this.isSessionActive = this.sessionService.isSessionActive();
           this.routes.navigate(['/home']);

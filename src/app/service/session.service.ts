@@ -19,6 +19,7 @@ export class SessionService {
   public data = Array<Object>();
   public sessMetaProp = null;
   public sessMetaObj = null;
+  public profileID;
 
 
   anyAuthenticationPromise() {
@@ -123,4 +124,14 @@ export class SessionService {
   getSessionMetadataObj() {
     return JSON.parse(localStorage.getItem('currentMetaObj'));
   }
+
+  setSessionProfile(value) {
+    this.profileID = value;
+    localStorage.setItem('profile', value);
+  }
+
+  getSessionProfile() {
+    return localStorage.getItem('profile');
+  }
+
 }
