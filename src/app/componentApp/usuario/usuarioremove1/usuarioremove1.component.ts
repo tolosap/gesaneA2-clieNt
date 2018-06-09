@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ConstantServiceService } from '../../../service/constant-service.service';
-import { SessionServerCallService } from '../../../service/session-server-call.service';
 import { ServiceConnService } from '../../../service/service-conn.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToolService } from '../../../service/tool.service';
+import { SessionService } from '../../../service/session.service';
 
 @Component({
   selector: 'app-usuarioremove1',
@@ -13,7 +13,7 @@ import { ToolService } from '../../../service/tool.service';
 export class Usuarioremove1Component implements OnInit {
   ob = 'usuario';
   op = 'remove';
-  profile = 1;
+  profile = this.sessionService.getSessionProfile();
   // ---
   id: number;
   // ---
@@ -33,7 +33,8 @@ export class Usuarioremove1Component implements OnInit {
     private constantService: ConstantServiceService,
     private router: Router,
     private toolService: ToolService,
-    private actRoute: ActivatedRoute
+    private actRoute: ActivatedRoute,
+    private sessionService: SessionService
   ) {}
 
   ngOnInit() {

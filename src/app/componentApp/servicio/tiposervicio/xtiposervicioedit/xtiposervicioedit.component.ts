@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './xtiposervicioedit.component.html',
   styleUrls: ['./xtiposervicioedit.component.css']
 })
-export class XtiposervicioeditComponent implements OnInit {
+export class ServicioxtiposervicioeditComponent implements OnInit {
 
   constructor() { }
 

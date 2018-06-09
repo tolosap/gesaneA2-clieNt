@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './xdestinoaltaedit.component.html',
   styleUrls: ['./xdestinoaltaedit.component.css']
 })
-export class XdestinoaltaeditComponent implements OnInit {
+export class EpisodioxdestinoaltaeditComponent implements OnInit {
 
   constructor() { }
 

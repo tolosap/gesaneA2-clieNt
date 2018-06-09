@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { XmedicoviewComponent } from './xmedicoview.component';
+import { MedicoxservicionewComponent } from './medicoxservicionew.component';
 
-describe('XmedicoviewComponent', () => {
-  let component: XmedicoviewComponent;
-  let fixture: ComponentFixture<XmedicoviewComponent>;
+describe('MedicoxservicionewComponent', () => {
+  let component: MedicoxservicionewComponent;
+  let fixture: ComponentFixture<MedicoxservicionewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ XmedicoviewComponent ]
+      declarations: [ MedicoxservicionewComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(XmedicoviewComponent);
+    fixture = TestBed.createComponent(MedicoxservicionewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

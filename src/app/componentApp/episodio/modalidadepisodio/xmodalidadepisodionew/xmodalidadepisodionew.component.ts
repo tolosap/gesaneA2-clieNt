@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './xmodalidadepisodionew.component.html',
   styleUrls: ['./xmodalidadepisodionew.component.css']
 })
-export class XmodalidadepisodionewComponent implements OnInit {
+export class EpisodioxmodalidadepisodionewComponent implements OnInit {
 
   constructor() { }
 

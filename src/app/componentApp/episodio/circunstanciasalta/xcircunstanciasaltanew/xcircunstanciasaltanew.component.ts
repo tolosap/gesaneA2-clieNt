@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './xcircunstanciasaltanew.component.html',
   styleUrls: ['./xcircunstanciasaltanew.component.css']
 })
-export class XcircunstanciasaltanewComponent implements OnInit {
+export class EpisodioxcircunstanciasaltanewComponent implements OnInit {
 
   constructor() { }
 

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './xepisodioedit.component.html',
   styleUrls: ['./xepisodioedit.component.css']
 })
-export class XepisodioeditComponent implements OnInit {
+export class EpisodioxepisodioeditComponent implements OnInit {
 
   constructor() { }
 

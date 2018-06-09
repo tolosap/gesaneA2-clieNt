@@ -39,7 +39,7 @@ import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawe
 import { Usuarionew1Component } from './componentApp/usuario/usuarionew1/usuarionew1.component';
 import { Usuarioedit1Component } from './componentApp/usuario/usuarioedit1/usuarioedit1.component';
 import { Usuarioremove1Component } from './componentApp/usuario/usuarioremove1/usuarioremove1.component';
-import { Xtipousuarioplist1Component } from './componentApp/usuario/1/tipousuario/xtipousuarioplist1/xtipousuarioplist1.component';
+import { Usuarioxtipousuarioplist1Component } from './componentApp/usuario/1/tipousuario/xtipousuarioplist1/xtipousuarioplist1.component';
 import { LogoutComponent } from './component/logout/logout.component';
 import { Tipousuarioview1Component } from './componentApp/tipousuario/tipousuarioview1/tipousuarioview1.component';
 import { Tipousuarioremove1Component } from './componentApp/tipousuario/tipousuarioremove1/tipousuarioremove1.component';
@@ -50,9 +50,9 @@ import { Grupoedit1Component } from './componentApp/grupo/grupoedit1/grupoedit1.
 import { Gruporemove1Component } from './componentApp/grupo/gruporemove1/gruporemove1.component';
 import { Grupoplist1Component } from './componentApp/grupo/grupoplist1/grupoplist1.component';
 import { Gruponew1Component } from './componentApp/grupo/gruponew1/gruponew1.component';
-import { Xusuarioplist1Component } from './componentApp/grupo/1/xusuario/xusuarioplist1/xusuarioplist1.component';
-import { Xusuarioedit1Component } from './componentApp/grupo/1/xusuario/xusuarioedit1/xusuarioedit1.component';
-import { Xusuarionew1Component } from './componentApp/grupo/1/xusuario/xusuarionew1/xusuarionew1.component';
+import { Grupoxusuarioplist1Component } from './componentApp/grupo/1/xusuario/xusuarioplist1/xusuarioplist1.component';
+import { Grupoxusuarioedit1Component } from './componentApp/grupo/1/xusuario/xusuarioedit1/xusuarioedit1.component';
+import { Grupoxusuarionew1Component } from './componentApp/grupo/1/xusuario/xusuarionew1/xusuarionew1.component';
 import { Cursoview1Component } from './componentApp/curso/cursoview1/cursoview1.component';
 import { Cursoremove1Component } from './componentApp/curso/cursoremove1/cursoremove1.component';
 import { Cursoplist1Component } from './componentApp/curso/cursoplist1/cursoplist1.component';
@@ -162,53 +162,87 @@ import { Tiposervicioplist1Component } from './componentApp/tiposervicio/tiposer
 import { Tiposervicioremove1Component } from './componentApp/tiposervicio/tiposervicioremove1/tiposervicioremove1.component';
 import { ClickOutsideDirective } from './directives/clickOutSide.directive';
 import { Pacientenew1Component } from './componentApp/paciente/pacientenew1/pacientenew1.component';
-import { XpacienteComponent } from './componentApp/episodio/paciente/xpacienteplist/xpaciente.component';
+import { EpisodioxpacienteplistComponent } from './componentApp/episodio/paciente/xpacienteplist/xpaciente.component';
 import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 import { ForeignkeyComponent } from './component/foreignkey/foreignkey.component';
-import { XtipousuarionewComponent } from './componentApp/usuario/1/tipousuario/xtipousuarionew/xtipousuarionew.component';
-import { XtipousuarioeditComponent } from './componentApp/usuario/1/tipousuario/xtipousuarioedit/xtipousuarioedit.component';
-import { XtiposervicioplistComponent } from './componentApp/servicio/tiposervicio/xtiposervicioplist/xtiposervicioplist.component';
-import { XtiposervicioeditComponent } from './componentApp/servicio/tiposervicio/xtiposervicioedit/xtiposervicioedit.component';
-import { XtiposervicionewComponent } from './componentApp/servicio/tiposervicio/xtiposervicionew/xtiposervicionew.component';
-import { XpacientenewComponent } from './componentApp/episodio/paciente/xpacientenew/xpacientenew.component';
-import { XpacienteeditComponent } from './componentApp/episodio/paciente/xpacienteedit/xpacienteedit.component';
+import { UsuarioxtipousuarionewComponent } from './componentApp/usuario/1/tipousuario/xtipousuarionew/xtipousuarionew.component';
+import { UsuarioxtipousuarioeditComponent } from './componentApp/usuario/1/tipousuario/xtipousuarioedit/xtipousuarioedit.component';
+import { ServicioxtiposervicioplistComponent } from './componentApp/servicio/tiposervicio/xtiposervicioplist/xtiposervicioplist.component';
+import { ServicioxtiposervicioeditComponent } from './componentApp/servicio/tiposervicio/xtiposervicioedit/xtiposervicioedit.component';
+import { ServicioxtiposervicionewComponent } from './componentApp/servicio/tiposervicio/xtiposervicionew/xtiposervicionew.component';
+import { EpisodioxpacientenewComponent } from './componentApp/episodio/paciente/xpacientenew/xpacientenew.component';
+import { EpisodioxpacienteeditComponent } from './componentApp/episodio/paciente/xpacienteedit/xpacienteedit.component';
 // tslint:disable-next-line:max-line-length
-import { XcircunstanciasaltaplistComponent } from './componentApp/episodio/circunstanciasalta/xcircunstanciasaltaplist/xcircunstanciasaltaplist.component';
+import { EpisodioxcircunstanciasaltaplistComponent } from './componentApp/episodio/circunstanciasalta/xcircunstanciasaltaplist/xcircunstanciasaltaplist.component';
 // tslint:disable-next-line:max-line-length
-import { XcircunstanciasaltanewComponent } from './componentApp/episodio/circunstanciasalta/xcircunstanciasaltanew/xcircunstanciasaltanew.component';
+import { EpisodioxcircunstanciasaltanewComponent } from './componentApp/episodio/circunstanciasalta/xcircunstanciasaltanew/xcircunstanciasaltanew.component';
 // tslint:disable-next-line:max-line-length
-import { XcircunstanciasaltaeditComponent } from './componentApp/episodio/circunstanciasalta/xcircunstanciasaltaedit/xcircunstanciasaltaedit.component';
-import { XservicioplistComponent } from './componentApp/episodio/servicio/xservicioplist/xservicioplist.component';
-import { XservicioeditComponent } from './componentApp/episodio/servicio/xservicioedit/xservicioedit.component';
-import { XservicionewComponent } from './componentApp/episodio/servicio/xservicionew/xservicionew.component';
-import { XfacturaplistComponent } from './componentApp/episodio/factura/xfacturaplist/xfacturaplist.component';
-import { XfacturanewComponent } from './componentApp/episodio/factura/xfacturanew/xfacturanew.component';
-import { XfacturaeditComponent } from './componentApp/episodio/factura/xfacturaedit/xfacturaedit.component';
-import { XdependenciaplistComponent } from './componentApp/episodio/dependencia/xdependenciaplist/xdependenciaplist.component';
-import { XdependenciaeditComponent } from './componentApp/episodio/dependencia/xdependenciaedit/xdependenciaedit.component';
-import { XdependencianewComponent } from './componentApp/episodio/dependencia/xdependencianew/xdependencianew.component';
-import { XmedicoplistComponent } from './componentApp/episodio/medico/xmedicoplist/xmedicoplist.component';
-import { XmedicoviewComponent } from './componentApp/episodio/medico/xmedicoview/xmedicoview.component';
-import { XmediconewComponent } from './componentApp/episodio/medico/xmediconew/xmediconew.component';
-import { XmedicoeditComponent } from './componentApp/episodio/medico/xmedicoedit/xmedicoedit.component';
-import { XtipoepisodioplistComponent } from './componentApp/episodio/tipoepisodio/xtipoepisodioplist/xtipoepisodioplist.component';
-import { XtipoepisodioeditComponent } from './componentApp/episodio/tipoepisodio/xtipoepisodioedit/xtipoepisodioedit.component';
-import { XtipoepisodionewComponent } from './componentApp/episodio/tipoepisodio/xtipoepisodionew/xtipoepisodionew.component';
-import { XepisodioplistComponent } from './componentApp/episodio/episodio/xepisodioplist/xepisodioplist.component';
-import { XepisodioeditComponent } from './componentApp/episodio/episodio/xepisodioedit/xepisodioedit.component';
-import { XepisodionewComponent } from './componentApp/episodio/episodio/xepisodionew/xepisodionew.component';
-import { XdestinoaltaplistComponent } from './componentApp/episodio/destinoalta/xdestinoaltaplist/xdestinoaltaplist.component';
-import { XdestinoaltaeditComponent } from './componentApp/episodio/destinoalta/xdestinoaltaedit/xdestinoaltaedit.component';
-import { XdestinoaltanewComponent } from './componentApp/episodio/destinoalta/xdestinoaltanew/xdestinoaltanew.component';
+import { EpisodioxcircunstanciasaltaeditComponent } from './componentApp/episodio/circunstanciasalta/xcircunstanciasaltaedit/xcircunstanciasaltaedit.component';
+import { EpisodioxservicioplistComponent } from './componentApp/episodio/servicio/xservicioplist/xservicioplist.component';
+import { EpisodioxservicioeditComponent } from './componentApp/episodio/servicio/xservicioedit/xservicioedit.component';
+import { EpisodioxservicionewComponent } from './componentApp/episodio/servicio/xservicionew/xservicionew.component';
+import { EpisodioxfacturaplistComponent } from './componentApp/episodio/factura/xfacturaplist/xfacturaplist.component';
+import { EpisodioxfacturanewComponent } from './componentApp/episodio/factura/xfacturanew/xfacturanew.component';
+import { EpisodioxfacturaeditComponent } from './componentApp/episodio/factura/xfacturaedit/xfacturaedit.component';
+import { EpisodioxdependenciaplistComponent } from './componentApp/episodio/dependencia/xdependenciaplist/xdependenciaplist.component';
+import { EpisodioxdependenciaeditComponent } from './componentApp/episodio/dependencia/xdependenciaedit/xdependenciaedit.component';
+import { EpisodioxdependencianewComponent } from './componentApp/episodio/dependencia/xdependencianew/xdependencianew.component';
+import { EpisodioxmedicoplistComponent } from './componentApp/episodio/medico/xmedicoplist/xmedicoplist.component';
+import { EpisodioxmediconewComponent } from './componentApp/episodio/medico/xmediconew/xmediconew.component';
+import { EpisodioxmedicoeditComponent } from './componentApp/episodio/medico/xmedicoedit/xmedicoedit.component';
+import { EpisodioxtipoepisodioplistComponent } from './componentApp/episodio/tipoepisodio/xtipoepisodioplist/xtipoepisodioplist.component';
+import { EpisodioxtipoepisodioeditComponent } from './componentApp/episodio/tipoepisodio/xtipoepisodioedit/xtipoepisodioedit.component';
+import { EpisodioxtipoepisodionewComponent } from './componentApp/episodio/tipoepisodio/xtipoepisodionew/xtipoepisodionew.component';
+import { EpisodioxepisodioplistComponent } from './componentApp/episodio/episodio/xepisodioplist/xepisodioplist.component';
+import { EpisodioxepisodioeditComponent } from './componentApp/episodio/episodio/xepisodioedit/xepisodioedit.component';
+import { EpisodioxepisodionewComponent } from './componentApp/episodio/episodio/xepisodionew/xepisodionew.component';
+import { EpisodioxdestinoaltaplistComponent } from './componentApp/episodio/destinoalta/xdestinoaltaplist/xdestinoaltaplist.component';
+import { EpisodioxdestinoaltaeditComponent } from './componentApp/episodio/destinoalta/xdestinoaltaedit/xdestinoaltaedit.component';
+import { EpisodioxdestinoaltanewComponent } from './componentApp/episodio/destinoalta/xdestinoaltanew/xdestinoaltanew.component';
 // tslint:disable-next-line:max-line-length
-import { XmodalidadepisodioplistComponent } from './componentApp/episodio/modalidadepisodio/xmodalidadepisodioplist/xmodalidadepisodioplist.component';
+import { EpisodioxmodalidadepisodioplistComponent } from './componentApp/episodio/modalidadepisodio/xmodalidadepisodioplist/xmodalidadepisodioplist.component';
 // tslint:disable-next-line:max-line-length
-import { XmodalidadepisodionewComponent } from './componentApp/episodio/modalidadepisodio/xmodalidadepisodionew/xmodalidadepisodionew.component';
+import { EpisodioxmodalidadepisodionewComponent } from './componentApp/episodio/modalidadepisodio/xmodalidadepisodionew/xmodalidadepisodionew.component';
 // tslint:disable-next-line:max-line-length
-import { XmodalidadepisodioeditComponent } from './componentApp/episodio/modalidadepisodio/xmodalidadepisodioedit/xmodalidadepisodioedit.component';
-import { XusuarioplistComponent } from './componentApp/episodio/usuario/xusuarioplist/xusuarioplist.component';
-import { XusuarioeditComponent } from './componentApp/episodio/usuario/xusuarioedit/xusuarioedit.component';
-import { XusuarionewComponent } from './componentApp/episodio/usuario/xusuarionew/xusuarionew.component';
+import { EpisodioxmodalidadepisodioeditComponent } from './componentApp/episodio/modalidadepisodio/xmodalidadepisodioedit/xmodalidadepisodioedit.component';
+import { EpisodioxusuarioplistComponent } from './componentApp/episodio/usuario/xusuarioplist/xusuarioplist.component';
+import { EpisodioxusuarioeditComponent } from './componentApp/episodio/usuario/xusuarioedit/xusuarioedit.component';
+import { EpisodioxusuarionewComponent } from './componentApp/episodio/usuario/xusuarionew/xusuarionew.component';
+import { GrupoxcursoplistComponent } from './componentApp/grupo/1/xcurso/grupoxcursoplist/grupoxcursoplist.component';
+import { GrupoxcursoeditComponent } from './componentApp/grupo/1/xcurso/grupoxcursoedit/grupoxcursoedit.component';
+import { GrupoxcursonewComponent } from './componentApp/grupo/1/xcurso/grupoxcursonew/grupoxcursonew.component';
+import { GrupoviewComponent } from './componentApp/grupo/grupoview/grupoview.component';
+import { PacientextipopagoplistComponent } from './componentApp/paciente/tipopago/pacientextipopagoplist/pacientextipopagoplist.component';
+import { PacientextipopagoeditComponent } from './componentApp/paciente/tipopago/pacientextipopagoedit/pacientextipopagoedit.component';
+import { PacientextipopagonewComponent } from './componentApp/paciente/tipopago/pacientextipopagonew/pacientextipopagonew.component';
+import { PacientexsexoplistComponent } from './componentApp/paciente/sexo/pacientexsexoplist/pacientexsexoplist.component';
+import { PacientexsexoeditComponent } from './componentApp/paciente/sexo/pacientexsexoedit/pacientexsexoedit.component';
+import { PacientexsexonewComponent } from './componentApp/paciente/sexo/pacientexsexonew/pacientexsexonew.component';
+import { PacientexusuarioplistComponent } from './componentApp/paciente/usuario/pacientexusuarioplist/pacientexusuarioplist.component';
+import { PacientexusuarioeditComponent } from './componentApp/paciente/usuario/pacientexusuarioedit/pacientexusuarioedit.component';
+import { PacientexusuarionewComponent } from './componentApp/paciente/usuario/pacientexusuarionew/pacientexusuarionew.component';
+// tslint:disable-next-line:max-line-length
+import { DepenxtipodepenplistComponent } from './componentApp/dependencia/tipodependencia/depenxtipodepenplist/depenxtipodepenplist.component';
+import { DepenxtipodepeneditComponent } from './componentApp/dependencia/tipodependencia/depenxtipodepenedit/depenxtipodepenedit.component';
+import { DepenxtipodepennewComponent } from './componentApp/dependencia/tipodependencia/depenxtipodepennew/depenxtipodepennew.component';
+// tslint:disable-next-line:max-line-length
+import { DepenxcentrosanplistComponent } from './componentApp/dependencia/centrosanitario/depenxcentrosanplist/depenxcentrosanplist.component';
+import { DepenxcentrosaneditComponent } from './componentApp/dependencia/centrosanitario/depenxcentrosanedit/depenxcentrosanedit.component';
+import { DepenxcentrosannewComponent } from './componentApp/dependencia/centrosanitario/depenxcentrosannew/depenxcentrosannew.component';
+import { MedicoxespecplistComponent } from './componentApp/medico/especialidad/medicoxespecplist/medicoxespecplist.component';
+import { MedicoxespeceditComponent } from './componentApp/medico/especialidad/medicoxespecedit/medicoxespecedit.component';
+import { MedicoxespecnewComponent } from './componentApp/medico/especialidad/medicoxespecnew/medicoxespecnew.component';
+import { MedicoxservicioplistComponent } from './componentApp/medico/servicio/medicoxservicioplist/medicoxservicioplist.component';
+import { MedicoxservicioeditComponent } from './componentApp/medico/servicio/medicoxservicioedit/medicoxservicioedit.component';
+import { MedicoxservicionewComponent } from './componentApp/medico/servicio/medicoxservicionew/medicoxservicionew.component';
+// tslint:disable-next-line:max-line-length
+import { MedicoxcentrosanplistComponent } from './componentApp/medico/centrosanitario/medicoxcentrosanplist/medicoxcentrosanplist.component';
+import { MedicoxcentrosaneditComponent } from './componentApp/medico/centrosanitario/medicoxcentrosanedit/medicoxcentrosanedit.component';
+import { MedicoxcentrosannewComponent } from './componentApp/medico/centrosanitario/medicoxcentrosannew/medicoxcentrosannew.component';
+import { MedicoxcategoplistComponent } from './componentApp/medico/categoriaprofesional/medicoxcategoplist/medicoxcategoplist.component';
+import { MedicoxcategoeditComponent } from './componentApp/medico/categoriaprofesional/medicoxcategoedit/medicoxcategoedit.component';
+import { MedicoxcategonewComponent } from './componentApp/medico/categoriaprofesional/medicoxcategonew/medicoxcategonew.component';
+import { PacienteeditComponent } from './componentApp/paciente/pacienteedit/pacienteedit.component';
 
 
 @NgModule({
@@ -236,7 +270,7 @@ import { XusuarionewComponent } from './componentApp/episodio/usuario/xusuarione
     Usuarionew1Component,
     Usuarioedit1Component,
     Usuarioremove1Component,
-    Xtipousuarioplist1Component,
+    Usuarioxtipousuarioplist1Component,
     LogoutComponent,
     Tipousuarioview1Component,
     Tipousuarioremove1Component,
@@ -246,9 +280,9 @@ import { XusuarionewComponent } from './componentApp/episodio/usuario/xusuarione
     Gruporemove1Component,
     Grupoplist1Component,
     Gruponew1Component,
-    Xusuarioplist1Component,
-    Xusuarioedit1Component,
-    Xusuarionew1Component,
+    Grupoxusuarioplist1Component,
+    Grupoxusuarioedit1Component,
+    Grupoxusuarionew1Component,
     Cursoview1Component,
     Cursoremove1Component,
     Cursoplist1Component,
@@ -344,47 +378,78 @@ import { XusuarionewComponent } from './componentApp/episodio/usuario/xusuarione
     Tiposervicioplist1Component,
     Tiposervicioremove1Component,
     Pacientenew1Component,
-    XpacienteComponent,
+    EpisodioxpacienteplistComponent,
     ForeignkeyComponent,
-    XtipousuarionewComponent,
-    XtipousuarioeditComponent,
-    XtiposervicioplistComponent,
-    XtiposervicioeditComponent,
-    XtiposervicionewComponent,
-    XpacientenewComponent,
-    XpacienteeditComponent,
-    XcircunstanciasaltaplistComponent,
-    XcircunstanciasaltanewComponent,
-    XcircunstanciasaltaeditComponent,
-    XservicioplistComponent,
-    XservicioeditComponent,
-    XservicionewComponent,
-    XfacturaplistComponent,
-    XfacturanewComponent,
-    XfacturaeditComponent,
-    XdependenciaplistComponent,
-    XdependenciaeditComponent,
-    XdependencianewComponent,
-    XmedicoplistComponent,
-    XmedicoviewComponent,
-    XmediconewComponent,
-    XmedicoeditComponent,
-    XtipoepisodioplistComponent,
-    XtipoepisodioeditComponent,
-    XtipoepisodionewComponent,
-    XepisodioplistComponent,
-    XepisodioeditComponent,
-    XepisodionewComponent,
-    XdestinoaltaplistComponent,
-    XdestinoaltaeditComponent,
-    XdestinoaltanewComponent,
-    XmodalidadepisodioplistComponent,
-    XmodalidadepisodionewComponent,
-    XmodalidadepisodioeditComponent,
-    XusuarioplistComponent,
-    XusuarioeditComponent,
-    XusuarionewComponent,
-    Grupoedit1Component
+    UsuarioxtipousuarionewComponent,
+    UsuarioxtipousuarioeditComponent,
+    ServicioxtiposervicioplistComponent,
+    ServicioxtiposervicioeditComponent,
+    ServicioxtiposervicionewComponent,
+    EpisodioxpacientenewComponent,
+    EpisodioxpacienteeditComponent,
+    EpisodioxcircunstanciasaltaplistComponent,
+    EpisodioxcircunstanciasaltanewComponent,
+    EpisodioxcircunstanciasaltaeditComponent,
+    EpisodioxservicioplistComponent,
+    EpisodioxservicioeditComponent,
+    EpisodioxservicionewComponent,
+    EpisodioxfacturaplistComponent,
+    EpisodioxfacturanewComponent,
+    EpisodioxfacturaeditComponent,
+    EpisodioxdependenciaplistComponent,
+    EpisodioxdependenciaeditComponent,
+    EpisodioxdependencianewComponent,
+    EpisodioxmedicoplistComponent,
+    EpisodioxmediconewComponent,
+    EpisodioxmedicoeditComponent,
+    EpisodioxtipoepisodioplistComponent,
+    EpisodioxtipoepisodioeditComponent,
+    EpisodioxtipoepisodionewComponent,
+    EpisodioxepisodioplistComponent,
+    EpisodioxepisodioeditComponent,
+    EpisodioxepisodionewComponent,
+    EpisodioxdestinoaltaplistComponent,
+    EpisodioxdestinoaltaeditComponent,
+    EpisodioxdestinoaltanewComponent,
+    EpisodioxmodalidadepisodioplistComponent,
+    EpisodioxmodalidadepisodionewComponent,
+    EpisodioxmodalidadepisodioeditComponent,
+    EpisodioxusuarioplistComponent,
+    EpisodioxusuarioeditComponent,
+    EpisodioxusuarionewComponent,
+    Grupoedit1Component,
+    GrupoxcursoplistComponent,
+    GrupoxcursoeditComponent,
+    GrupoxcursonewComponent,
+    GrupoviewComponent,
+    PacientextipopagoplistComponent,
+    PacientextipopagoeditComponent,
+    PacientextipopagonewComponent,
+    PacientexsexoplistComponent,
+    PacientexsexoeditComponent,
+    PacientexsexonewComponent,
+    PacientexusuarioplistComponent,
+    PacientexusuarioeditComponent,
+    PacientexusuarionewComponent,
+    DepenxtipodepenplistComponent,
+    DepenxtipodepeneditComponent,
+    DepenxtipodepennewComponent,
+    DepenxcentrosanplistComponent,
+    DepenxcentrosaneditComponent,
+    DepenxcentrosannewComponent,
+    MedicoxespecplistComponent,
+    MedicoxespeceditComponent,
+    MedicoxespecnewComponent,
+    MedicoxservicioplistComponent,
+    MedicoxservicioeditComponent,
+    MedicoxservicionewComponent,
+    MedicoxcentrosanplistComponent,
+    MedicoxcentrosaneditComponent,
+    MedicoxcentrosannewComponent,
+    MedicoxcategoplistComponent,
+    MedicoxcategoeditComponent,
+    MedicoxcategonewComponent,
+    PacienteeditComponent
   ],
   imports: [
     HttpClientModule,

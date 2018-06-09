@@ -3,6 +3,7 @@ import { ServiceConnService } from '../../../service/service-conn.service';
 import { ConstantServiceService } from '../../../service/constant-service.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToolService } from '../../../service/tool.service';
+import { SessionService } from '../../../service/session.service';
 
 @Component({
   selector: 'app-usuarioview1',
@@ -13,7 +14,7 @@ import { ToolService } from '../../../service/tool.service';
 export class Usuarioview1Component implements OnInit {
   ob = 'usuario';
   op = 'view';
-  profile = 1;
+  profile = this.sessionService.getSessionProfile();
   // ---
   id: number;
   onlyview = false;
@@ -33,7 +34,8 @@ export class Usuarioview1Component implements OnInit {
     private constantService: ConstantServiceService,
     private router: Router,
     private toolService: ToolService,
-    private actRoute: ActivatedRoute
+    private actRoute: ActivatedRoute,
+    private sessionService: SessionService
   ) {}
 
   ngOnInit() {

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './xdependenciaplist.component.html',
   styleUrls: ['./xdependenciaplist.component.css']
 })
-export class XdependenciaplistComponent implements OnInit {
+export class EpisodioxdependenciaplistComponent implements OnInit {
 
   constructor() { }
 

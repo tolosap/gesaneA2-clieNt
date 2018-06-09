@@ -1,3 +1,4 @@
+import { Tiposervicionew1Component } from './componentApp/tiposervicio/tiposervicionew1/tiposervicionew1.component';
 import { AuthServiceService } from './service/auth/auth-service.service';
 import { AuthGuardServiceService as RoleGuard } from './service/auth/auth-guard-service.service';
 import { Dependenciaplist1Component } from './componentApp/dependencia/dependenciaplist1/dependenciaplist1.component';
@@ -56,7 +57,7 @@ import { Grupoedit1Component } from './componentApp/grupo/grupoedit1/grupoedit1.
 import { Grupoplist1Component } from './componentApp/grupo/grupoplist1/grupoplist1.component';
 import { Gruporemove1Component } from './componentApp/grupo/gruporemove1/gruporemove1.component';
 import { Gruponew1Component } from './componentApp/grupo/gruponew1/gruponew1.component';
-import { Xusuarioplist1Component } from './componentApp/grupo/1/xusuario/xusuarioplist1/xusuarioplist1.component';
+import { Grupoxusuarioplist1Component } from './componentApp/grupo/1/xusuario/xusuarioplist1/xusuarioplist1.component';
 // --------------PACIENTE------------------
 import { Pacienteplist1Component } from './componentApp/paciente/pacienteplist1/pacienteplist1.component';
 import { Pacienteremove1Component } from './componentApp/paciente/pacienteremove1/pacienteremove1.component';
@@ -73,7 +74,6 @@ import { Usuarioview1Component } from './componentApp/usuario/usuarioview1/usuar
 import { Usuarioremove1Component } from './componentApp/usuario/usuarioremove1/usuarioremove1.component';
 import { Usuarionew1Component } from './componentApp/usuario/usuarionew1/usuarionew1.component';
 import { Usuarioedit1Component } from './componentApp/usuario/usuarioedit1/usuarioedit1.component';
-import { Xtipousuarioplist1Component } from './componentApp/usuario/1/tipousuario/xtipousuarioplist1/xtipousuarioplist1.component';
 import { Dependenciaview1Component } from './componentApp/dependencia/dependenciaview1/dependenciaview1.component';
 import { Destinoaltaedit1Component } from './componentApp/destinoalta/destinoaltaedit1/destinoaltaedit1.component';
 import { Destinoaltanew1Component } from './componentApp/destinoalta/destinoaltanew1/destinoaltanew1.component';
@@ -107,12 +107,115 @@ import { Sexoplist1Component } from './componentApp/sexo/sexoplist1/sexoplist1.c
 import { Sexoview1Component } from './componentApp/sexo/sexoview1/sexoview1.component';
 import { Sexoremove1Component } from './componentApp/sexo/sexoremove1/sexoremove1.component';
 import { Pacientenew1Component } from './componentApp/paciente/pacientenew1/pacientenew1.component';
-import { XpacienteComponent } from './componentApp/episodio/paciente/xpacienteplist/xpaciente.component';
 import { Tipopagoplist1Component } from './componentApp/tipopago/tipopagoplist1/tipopagoplist1.component';
 import { Tipopagoview1Component } from './componentApp/tipopago/tipopagoview1/tipopagoview1.component';
 import { Tipopagoremove1Component } from './componentApp/tipopago/tipopagoremove1/tipopagoremove1.component';
 import { Tipopagoedit1Component } from './componentApp/tipopago/tipopagoedit1/tipopagoedit1.component';
 import { Tipopagonew1Component } from './componentApp/tipopago/tipopagonew1/tipopagonew1.component';
+import { Cursoedit1Component } from './componentApp/curso/cursoedit1/cursoedit1.component';
+import { Cursonew1Component } from './componentApp/curso/cursonew1/cursonew1.component';
+import { EpisodioxusuarioplistComponent } from './componentApp/episodio/usuario/xusuarioplist/xusuarioplist.component';
+import { GrupoxcursoplistComponent } from './componentApp/grupo/1/xcurso/grupoxcursoplist/grupoxcursoplist.component';
+import { GrupoxcursoeditComponent } from './componentApp/grupo/1/xcurso/grupoxcursoedit/grupoxcursoedit.component';
+import { GrupoxcursonewComponent } from './componentApp/grupo/1/xcurso/grupoxcursonew/grupoxcursonew.component';
+import { UsuarioxtipousuarionewComponent } from './componentApp/usuario/1/tipousuario/xtipousuarionew/xtipousuarionew.component';
+import { UsuarioxtipousuarioeditComponent } from './componentApp/usuario/1/tipousuario/xtipousuarioedit/xtipousuarioedit.component';
+import { GrupoviewComponent } from './componentApp/grupo/grupoview/grupoview.component';
+import { Usuarioxtipousuarioplist1Component } from './componentApp/usuario/1/tipousuario/xtipousuarioplist1/xtipousuarioplist1.component';
+import { Grupoxusuarioedit1Component } from './componentApp/grupo/1/xusuario/xusuarioedit1/xusuarioedit1.component';
+import { Grupoxusuarionew1Component } from './componentApp/grupo/1/xusuario/xusuarionew1/xusuarionew1.component';
+import { Centroedit1Component } from './componentApp/centro/centroedit1/centroedit1.component';
+import { Centronew1Component } from './componentApp/centro/centronew1/centronew1.component';
+import { Centrosanitarioedit1Component } from './componentApp/centrosanitario/centrosanitarioedit1/centrosanitarioedit1.component';
+import { Centrosanitarionew1Component } from './componentApp/centrosanitario/centrosanitarionew1/centrosanitarionew1.component';
+import { PacientexusuarioplistComponent } from './componentApp/paciente/usuario/pacientexusuarioplist/pacientexusuarioplist.component';
+import { PacientexusuarioeditComponent } from './componentApp/paciente/usuario/pacientexusuarioedit/pacientexusuarioedit.component';
+import { PacientexusuarionewComponent } from './componentApp/paciente/usuario/pacientexusuarionew/pacientexusuarionew.component';
+import { PacientextipopagoplistComponent } from './componentApp/paciente/tipopago/pacientextipopagoplist/pacientextipopagoplist.component';
+import { PacientextipopagoeditComponent } from './componentApp/paciente/tipopago/pacientextipopagoedit/pacientextipopagoedit.component';
+import { PacientextipopagonewComponent } from './componentApp/paciente/tipopago/pacientextipopagonew/pacientextipopagonew.component';
+import { PacientexsexoplistComponent } from './componentApp/paciente/sexo/pacientexsexoplist/pacientexsexoplist.component';
+import { PacientexsexoeditComponent } from './componentApp/paciente/sexo/pacientexsexoedit/pacientexsexoedit.component';
+import { PacientexsexonewComponent } from './componentApp/paciente/sexo/pacientexsexonew/pacientexsexonew.component';
+// tslint:disable-next-line:max-line-length
+import { DepenxtipodepenplistComponent } from './componentApp/dependencia/tipodependencia/depenxtipodepenplist/depenxtipodepenplist.component';
+import { DepenxtipodepeneditComponent } from './componentApp/dependencia/tipodependencia/depenxtipodepenedit/depenxtipodepenedit.component';
+import { DepenxtipodepennewComponent } from './componentApp/dependencia/tipodependencia/depenxtipodepennew/depenxtipodepennew.component';
+// tslint:disable-next-line:max-line-length
+import { DepenxcentrosanplistComponent } from './componentApp/dependencia/centrosanitario/depenxcentrosanplist/depenxcentrosanplist.component';
+import { DepenxcentrosaneditComponent } from './componentApp/dependencia/centrosanitario/depenxcentrosanedit/depenxcentrosanedit.component';
+import { DepenxcentrosannewComponent } from './componentApp/dependencia/centrosanitario/depenxcentrosannew/depenxcentrosannew.component';
+// tslint:disable-next-line:max-line-length
+import { EpisodioxcircunstanciasaltanewComponent } from './componentApp/episodio/circunstanciasalta/xcircunstanciasaltanew/xcircunstanciasaltanew.component';
+// tslint:disable-next-line:max-line-length
+import { EpisodioxcircunstanciasaltaplistComponent } from './componentApp/episodio/circunstanciasalta/xcircunstanciasaltaplist/xcircunstanciasaltaplist.component';
+// tslint:disable-next-line:max-line-length
+import { EpisodioxcircunstanciasaltaeditComponent } from './componentApp/episodio/circunstanciasalta/xcircunstanciasaltaedit/xcircunstanciasaltaedit.component';
+import { EpisodioxservicioplistComponent } from './componentApp/episodio/servicio/xservicioplist/xservicioplist.component';
+import { EpisodioxservicionewComponent } from './componentApp/episodio/servicio/xservicionew/xservicionew.component';
+import { EpisodioxservicioeditComponent } from './componentApp/episodio/servicio/xservicioedit/xservicioedit.component';
+import { EpisodioxpacientenewComponent } from './componentApp/episodio/paciente/xpacientenew/xpacientenew.component';
+import { EpisodioxpacienteeditComponent } from './componentApp/episodio/paciente/xpacienteedit/xpacienteedit.component';
+import { EpisodioxfacturaplistComponent } from './componentApp/episodio/factura/xfacturaplist/xfacturaplist.component';
+import { EpisodioxfacturanewComponent } from './componentApp/episodio/factura/xfacturanew/xfacturanew.component';
+import { EpisodioxfacturaeditComponent } from './componentApp/episodio/factura/xfacturaedit/xfacturaedit.component';
+import { EpisodioxdependenciaplistComponent } from './componentApp/episodio/dependencia/xdependenciaplist/xdependenciaplist.component';
+import { EpisodioxdependencianewComponent } from './componentApp/episodio/dependencia/xdependencianew/xdependencianew.component';
+import { EpisodioxdependenciaeditComponent } from './componentApp/episodio/dependencia/xdependenciaedit/xdependenciaedit.component';
+import { EpisodioxmedicoplistComponent } from './componentApp/episodio/medico/xmedicoplist/xmedicoplist.component';
+import { EpisodioxmediconewComponent } from './componentApp/episodio/medico/xmediconew/xmediconew.component';
+import { EpisodioxmedicoeditComponent } from './componentApp/episodio/medico/xmedicoedit/xmedicoedit.component';
+import { EpisodioxtipoepisodioplistComponent } from './componentApp/episodio/tipoepisodio/xtipoepisodioplist/xtipoepisodioplist.component';
+import { EpisodioxtipoepisodionewComponent } from './componentApp/episodio/tipoepisodio/xtipoepisodionew/xtipoepisodionew.component';
+import { EpisodioxtipoepisodioeditComponent } from './componentApp/episodio/tipoepisodio/xtipoepisodioedit/xtipoepisodioedit.component';
+import { EpisodioxepisodioplistComponent } from './componentApp/episodio/episodio/xepisodioplist/xepisodioplist.component';
+import { EpisodioxepisodionewComponent } from './componentApp/episodio/episodio/xepisodionew/xepisodionew.component';
+import { EpisodioxepisodioeditComponent } from './componentApp/episodio/episodio/xepisodioedit/xepisodioedit.component';
+import { EpisodioxdestinoaltaplistComponent } from './componentApp/episodio/destinoalta/xdestinoaltaplist/xdestinoaltaplist.component';
+import { EpisodioxdestinoaltanewComponent } from './componentApp/episodio/destinoalta/xdestinoaltanew/xdestinoaltanew.component';
+import { EpisodioxdestinoaltaeditComponent } from './componentApp/episodio/destinoalta/xdestinoaltaedit/xdestinoaltaedit.component';
+// tslint:disable-next-line:max-line-length
+import { EpisodioxmodalidadepisodioplistComponent } from './componentApp/episodio/modalidadepisodio/xmodalidadepisodioplist/xmodalidadepisodioplist.component';
+// tslint:disable-next-line:max-line-length
+import { EpisodioxmodalidadepisodionewComponent } from './componentApp/episodio/modalidadepisodio/xmodalidadepisodionew/xmodalidadepisodionew.component';
+// tslint:disable-next-line:max-line-length
+import { EpisodioxmodalidadepisodioeditComponent } from './componentApp/episodio/modalidadepisodio/xmodalidadepisodioedit/xmodalidadepisodioedit.component';
+import { EpisodioxusuarionewComponent } from './componentApp/episodio/usuario/xusuarionew/xusuarionew.component';
+import { EpisodioxusuarioeditComponent } from './componentApp/episodio/usuario/xusuarioedit/xusuarioedit.component';
+import { EpisodioxpacienteplistComponent } from './componentApp/episodio/paciente/xpacienteplist/xpaciente.component';
+import { Especialidadedit1Component } from './componentApp/especialidad/especialidadedit1/especialidadedit1.component';
+import { Especialidadnew1Component } from './componentApp/especialidad/especialidadnew1/especialidadnew1.component';
+import { Facturaedit1Component } from './componentApp/factura/facturaedit1/facturaedit1.component';
+import { Facturanew1Component } from './componentApp/factura/facturanew1/facturanew1.component';
+import { Medicoedit1Component } from './componentApp/medico/medicoedit1/medicoedit1.component';
+import { Mediconew1Component } from './componentApp/medico/mediconew1/mediconew1.component';
+import { MedicoxespecplistComponent } from './componentApp/medico/especialidad/medicoxespecplist/medicoxespecplist.component';
+import { MedicoxespecnewComponent } from './componentApp/medico/especialidad/medicoxespecnew/medicoxespecnew.component';
+import { MedicoxespeceditComponent } from './componentApp/medico/especialidad/medicoxespecedit/medicoxespecedit.component';
+import { MedicoxservicioplistComponent } from './componentApp/medico/servicio/medicoxservicioplist/medicoxservicioplist.component';
+import { MedicoxservicionewComponent } from './componentApp/medico/servicio/medicoxservicionew/medicoxservicionew.component';
+import { MedicoxservicioeditComponent } from './componentApp/medico/servicio/medicoxservicioedit/medicoxservicioedit.component';
+// tslint:disable-next-line:max-line-length
+import { MedicoxcentrosanplistComponent } from './componentApp/medico/centrosanitario/medicoxcentrosanplist/medicoxcentrosanplist.component';
+import { MedicoxcentrosannewComponent } from './componentApp/medico/centrosanitario/medicoxcentrosannew/medicoxcentrosannew.component';
+import { MedicoxcentrosaneditComponent } from './componentApp/medico/centrosanitario/medicoxcentrosanedit/medicoxcentrosanedit.component';
+import { MedicoxcategoplistComponent } from './componentApp/medico/categoriaprofesional/medicoxcategoplist/medicoxcategoplist.component';
+import { MedicoxcategonewComponent } from './componentApp/medico/categoriaprofesional/medicoxcategonew/medicoxcategonew.component';
+import { MedicoxcategoeditComponent } from './componentApp/medico/categoriaprofesional/medicoxcategoedit/medicoxcategoedit.component';
+import { Modalidadepisodioedit1Component } from './componentApp/modalidadepisodio/modalidadepisodioedit1/modalidadepisodioedit1.component';
+import { Modalidadepisodionew1Component } from './componentApp/modalidadepisodio/modalidadepisodionew1/modalidadepisodionew1.component';
+import { Servicioedit1Component } from './componentApp/servicio/servicioedit1/servicioedit1.component';
+import { Servicionew1Component } from './componentApp/servicio/servicionew1/servicionew1.component';
+import { ServicioxtiposervicioplistComponent } from './componentApp/servicio/tiposervicio/xtiposervicioplist/xtiposervicioplist.component';
+import { ServicioxtiposervicionewComponent } from './componentApp/servicio/tiposervicio/xtiposervicionew/xtiposervicionew.component';
+import { ServicioxtiposervicioeditComponent } from './componentApp/servicio/tiposervicio/xtiposervicioedit/xtiposervicioedit.component';
+import { Sexoedit1Component } from './componentApp/sexo/sexoedit1/sexoedit1.component';
+import { Sexonew1Component } from './componentApp/sexo/sexonew1/sexonew1.component';
+import { Tiposervicioplist1Component } from './componentApp/tiposervicio/tiposervicioplist1/tiposervicioplist1.component';
+import { Tiposervicioview1Component } from './componentApp/tiposervicio/tiposervicioview1/tiposervicioview1.component';
+import { Tiposervicioremove1Component } from './componentApp/tiposervicio/tiposervicioremove1/tiposervicioremove1.component';
+import { Tiposervicioedit1Component } from './componentApp/tiposervicio/tiposervicioedit1/tiposervicioedit1.component';
+import { PacienteeditComponent } from './componentApp/paciente/pacienteedit/pacienteedit.component';
 
 
 export const app_routes: Routes = [
@@ -145,12 +248,13 @@ export const app_routes: Routes = [
      component: Usuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'usuario/:profile/new',
      component: Usuarionew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     // xtipousuario
     { path: 'usuario/:profile/xtipousuario/plistx/:id/:page/:rpp',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'usuario/:profile/xtipousuario/newx/',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'usuario/:profile/xtipousuario/editx/:id/',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Usuarioxtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'usuario/:profile/xtipousuario/newx/:id',
+     component: UsuarioxtipousuarionewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'usuario/:profile/xtipousuario/editx/:id/:xid/',
+     component: UsuarioxtipousuarioeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // ---------TIPO USUARIO-----------
     { path: 'tipousuario/:profile/plist/:page/:rpp',
@@ -168,15 +272,27 @@ export const app_routes: Routes = [
     { path: 'grupo/:profile/plist/:page/:rpp',
      component: Grupoplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'grupo/:profile/view/:id',
-     component: Grupoedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3,4,5' }},
+     component: GrupoviewComponent, canActivate: [RoleGuard], data: { expectedRole: '1,3,4,5' }},
     { path: 'grupo/:profile/remove/:id',
      component: Gruporemove1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'grupo/:profile/edit/:id',
-     component: Tipousuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Grupoedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'grupo/:profile/new',
      component: Gruponew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     // xusuario
     { path: 'grupo/:profile/xusuario/plistx/:id/:page/:rpp',
-     component: Xusuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Grupoxusuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'grupo/:profile/xusuario/editx/:id/:xid/',
+     component: Grupoxusuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'grupo/:profile/xusuario/newx/:id',
+     component: Grupoxusuarionew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    // xcurso
+    { path: 'grupo/:profile/xusuario/plistx/:id/:page/:rpp',
+    component: GrupoxcursoplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+   { path: 'grupo/:profile/xusuario/editx/:id/:xid/',
+    component: GrupoxcursoeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+   { path: 'grupo/:profile/xusuario/newx/:id',
+    component: GrupoxcursonewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // ------------CURSO---------------
     { path: 'curso/:profile/plist/:page/:rpp',
@@ -186,11 +302,9 @@ export const app_routes: Routes = [
     { path: 'curso/:profile/remove/:id',
      component: Cursoremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'curso/:profile/edit/:id',
-     component: Tipousuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Cursoedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'curso/:profile/new',
-     component: Gruponew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'curso/:profile/xusuario/plistx/:id/:page/:rpp',
-     component: Xusuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Cursonew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // ------------CENTRO-------------
     { path: 'centro/:profile/plist/:page/:rpp',
@@ -200,11 +314,9 @@ export const app_routes: Routes = [
     { path: 'centro/:profile/remove/:id',
      component: Centroremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'centro/:profile/edit/:id',
-     component: Tipousuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Centroedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'centro/:profile/new',
-     component: Gruponew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'centro/:profile/xusuario/plistx/:id/:page/:rpp',
-     component: Xusuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Centronew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // ------------CENTRO SANITARIO-------------
     { path: 'centrosanitario/:profile/plist/:page/:rpp',
@@ -214,11 +326,9 @@ export const app_routes: Routes = [
     { path: 'centrosanitario/:profile/remove/:id',
      component: Centrosanitarioremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'centrosanitario/:profile/edit/:id',
-     component: Tipousuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Centrosanitarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'centrosanitario/:profile/new',
-     component: Gruponew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'centrosanitario/:profile/xusuario/plistx/:id/:page/:rpp',
-     component: Xusuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Centrosanitarionew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // ----------------PACIENTES-----------------
     { path: 'paciente/:profile/plist/:page/:rpp',
@@ -228,11 +338,31 @@ export const app_routes: Routes = [
     { path: 'paciente/:profile/remove/:id',
      component: Pacienteremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3,4' }},
     { path: 'paciente/:profile/edit/:id',
-     component: Tipousuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3,4' }},
+     component: PacienteeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1,3,4' }},
     { path: 'paciente/:profile/new',
      component: Pacientenew1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3,4' }},
+     // xusuario
     { path: 'paciente/:profile/xusuario/plistx/:id/:page/:rpp',
-     component: Xusuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3,4' }},
+     component: PacientexusuarioplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
+     { path: 'paciente/:profile/xusuario/editx/:id/:xid/',
+     component: PacientexusuarioeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
+    { path: 'paciente/:profile/xusuario/newx/:id',
+     component: PacientexusuarionewComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
+     // xtipopago
+     { path: 'paciente/:profile/xtipopago/plistx/:id/:page/:rpp',
+     component: PacientextipopagoplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
+     { path: 'paciente/:profile/xtipopago/editx/:id/:xid/',
+     component: PacientextipopagoeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
+    { path: 'paciente/:profile/xtipopago/newx/:id',
+     component: PacientextipopagonewComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
+     // xsexo
+     { path: 'paciente/:profile/xsexo/plistx/:id/:page/:rpp',
+     component: PacientexsexoplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
+     { path: 'paciente/:profile/xsexo/editx/:id/:xid/',
+     component: PacientexsexoeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
+    { path: 'paciente/:profile/xsexo/newx/:id',
+     component: PacientexsexonewComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
+
 
     // ----------------DEPENDENCIA-----------------
     { path: 'dependencia/:profile/plist/:page/:rpp',
@@ -242,9 +372,23 @@ export const app_routes: Routes = [
     { path: 'dependencia/:profile/remove/:id',
      component: Dependenciaremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
     { path: 'dependencia/:profile/edit/:id',
-     component: Tipousuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
+     component: Dependenciaedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
     { path: 'dependencia/:profile/new',
-     component: Gruponew1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
+     component: Dependencianew1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
+     // xcentrosanitario
+     { path: 'dependencia/:profile/xcentrosanitario/plistx/:id/:page/:rpp',
+     component: DepenxcentrosanplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
+     { path: 'dependencia/:profile/xcentrosanitario/editx/:id/:xid/',
+     component: DepenxcentrosaneditComponent, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
+    { path: 'dependencia/:profile/xcentrosanitario/newx/:id',
+     component: DepenxcentrosannewComponent, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
+     // xtipodependencia
+     { path: 'dependencia/:profile/xtipodependencia/plistx/:id/:page/:rpp',
+     component: DepenxtipodepenplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
+     { path: 'dependencia/:profile/xtipodependencia/editx/:id/:xid/',
+     component: DepenxtipodepeneditComponent, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
+    { path: 'dependencia/:profile/xtipodependencia/newx/:id',
+     component: DepenxtipodepennewComponent, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
 
     // ----------------DESTINO ALTA-----------------
     { path: 'destinoalta/:profile/plist/:page/:rpp',
@@ -254,9 +398,9 @@ export const app_routes: Routes = [
     { path: 'destinoalta/:profile/remove/:id',
      component: Destinoaltaremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'destinoalta/:profile/edit/:id',
-     component: Tipousuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Destinoaltaedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'destinoalta/:profile/new',
-     component: Gruponew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Destinoaltanew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // ----------------EPISODIO-----------------
     { path: 'episodio/:profile/plist/:page/:rpp',
@@ -266,86 +410,86 @@ export const app_routes: Routes = [
     { path: 'episodio/:profile/remove/:id',
      component: Episodioremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'episodio/:profile/edit/:id',
-     component: Tipousuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Episodioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'episodio/:profile/new',
-     component: Gruponew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Episodionew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     // xcircunsalta
     { path: 'episodio/:profile/xcircunstanciasalta/plistx/:id/:page/:rpp',
-     component: XpacienteComponent, canActivate: [RoleGuard], data: { expectedRole: '1,3,4' }},
-    { path: 'episodio/:profile/xcircunstanciasalta/newx',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xcircunstanciasalta/editx/:id',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: EpisodioxcircunstanciasaltaplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1,3,4' }},
+    { path: 'episodio/:profile/xcircunstanciasalta/newx/:id',
+     component: EpisodioxcircunstanciasaltanewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xcircunstanciasalta/editx/:id/:xid',
+     component: EpisodioxcircunstanciasaltaeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     // xservicio
     { path: 'episodio/:profile/xservicio/plistx/:id/:page/:rpp',
-     component: XpacienteComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xservicio/newx',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xservicio/editx/:id',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: EpisodioxservicioplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xservicio/newx/:id',
+     component: EpisodioxservicionewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xservicio/editx/:id/:xid',
+     component: EpisodioxservicioeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     // xpaciente
     { path: 'episodio/:profile/xpaciente/plistx/:id/:page/:rpp',
-     component: XpacienteComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
-    { path: 'episodio/:profile/xpaciente/newx',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
-    { path: 'episodio/:profile/xpaciente/editx/:id',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
+     component: EpisodioxpacienteplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
+    { path: 'episodio/:profile/xpaciente/newx/:id',
+     component: EpisodioxpacientenewComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
+    { path: 'episodio/:profile/xpaciente/editx/:id/:xid',
+     component: EpisodioxpacienteeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
     // xfactura
     { path: 'episodio/:profile/xfactura/plistx/:id/:page/:rpp',
-     component: XpacienteComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xfactura/newx',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xfactura/editx/:id',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: EpisodioxfacturaplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xfactura/newx/:id',
+     component: EpisodioxfacturanewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xfactura/editx/:id/:xid',
+     component: EpisodioxfacturaeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     // xdependencia
     { path: 'episodio/:profile/xdependencia/plistx/:id/:page/:rpp',
-     component: XpacienteComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xdependencia/newx',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xdependencia/editx/:id',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: EpisodioxdependenciaplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xdependencia/newx/:id',
+     component: EpisodioxdependencianewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xdependencia/editx/:id/:xid',
+     component: EpisodioxdependenciaeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     // xmedico
     { path: 'episodio/:profile/xmedico/plistx/:id/:page/:rpp',
-     component: XpacienteComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xmedico/newx',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xmedico/editx/:id',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: EpisodioxmedicoplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xmedico/newx/:id',
+     component: EpisodioxmediconewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xmedico/editx/:id/:xid',
+     component: EpisodioxmedicoeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     // xtipoepisodio
     { path: 'episodio/:profile/xtipoepisodio/plistx/:id/:page/:rpp',
-     component: XpacienteComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xtipoepisodio/newx',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xtipoepisodio/editx/:id',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: EpisodioxtipoepisodioplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xtipoepisodio/newx/:id',
+     component: EpisodioxtipoepisodionewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xtipoepisodio/editx/:id/:xid',
+     component: EpisodioxtipoepisodioeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     // xepisodio
     { path: 'episodio/:profile/xepisodio/plistx/:id/:page/:rpp',
-     component: XpacienteComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
-    { path: 'episodio/:profile/xepisodio/newx',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
-    { path: 'episodio/:profile/xepisodio/editx/:id',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
+     component: EpisodioxepisodioplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
+    { path: 'episodio/:profile/xepisodio/newx/:id',
+     component: EpisodioxepisodionewComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
+    { path: 'episodio/:profile/xepisodio/editx/:id/:xid',
+     component: EpisodioxepisodioeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1,4' }},
     // xdestinoalta
     { path: 'episodio/:profile/xdestinoalta/plistx/:id/:page/:rpp',
-     component: XpacienteComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xdestinoalta/newx',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xdestinoalta/editx/:id',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: EpisodioxdestinoaltaplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xdestinoalta/newx/:id',
+     component: EpisodioxdestinoaltanewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xdestinoalta/editx/:id/:xid',
+     component: EpisodioxdestinoaltaeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     // xmodalidadepisodio
     { path: 'episodio/:profile/xmodalidadepisodio/plistx/:id/:page/:rpp',
-     component: XpacienteComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xmodalidadepisodio/newx',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xmodalidadepisodio/editx/:id',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: EpisodioxmodalidadepisodioplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xmodalidadepisodio/newx/:id',
+     component: EpisodioxmodalidadepisodionewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xmodalidadepisodio/editx/:id/:xid',
+     component: EpisodioxmodalidadepisodioeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     // xusuario
     { path: 'episodio/:profile/xusuario/plistx/:id/:page/:rpp',
-     component: XpacienteComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xusuario/newx',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'episodio/:profile/xusuario/editx/:id',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: EpisodioxusuarioplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xusuario/newx/:id',
+     component: EpisodioxusuarionewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'episodio/:profile/xusuario/editx/:id/:xid',
+     component: EpisodioxusuarioeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // ----------------ESPECIALIDAD-----------------
     { path: 'especialidad/:profile/plist/:page/:rpp',
@@ -354,22 +498,50 @@ export const app_routes: Routes = [
      component: Especialidadview1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3,4,5' }},
     { path: 'especialidad/:profile/remove/:id',
      component: Especialidadremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'especialidad/:profile/edit/:id', component: Tipousuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'especialidad/:profile/new', component: Gruponew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'especialidad/:profile/edit/:id', component: Especialidadedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'especialidad/:profile/new', component: Especialidadnew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // ----------------FACTURA-----------------
     { path: 'factura/:profile/plist/:page/:rpp', component: Facturaplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'factura/:profile/view/:id', component: Facturaview1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3,4,5' }},
     { path: 'factura/:profile/remove/:id', component: Facturaremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'factura/:profile/edit/:id', component: Tipousuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'factura/:profile/new', component: Gruponew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'factura/:profile/edit/:id', component: Facturaedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'factura/:profile/new', component: Facturanew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // ----------------MEDICO-----------------
     { path: 'medico/:profile/plist/:page/:rpp', component: Medicoplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
     { path: 'medico/:profile/view/:id', component: Medicoview1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3,4,5' }},
     { path: 'medico/:profile/remove/:id', component: Medicoremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
-    { path: 'medico/:profile/edit/:id', component: Tipousuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
-    { path: 'medico/:profile/new', component: Gruponew1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
+    { path: 'medico/:profile/edit/:id', component: Medicoedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
+    { path: 'medico/:profile/new', component: Mediconew1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3' }},
+    // xespecialidad
+    { path: 'medico/:profile/xespecialidad/plistx/:id/:page/:rpp',
+    component: MedicoxespecplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+   { path: 'medico/:profile/xespecialidad/newx/:id',
+    component: MedicoxespecnewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+   { path: 'medico/:profile/xespecialidad/editx/:id/:xid',
+    component: MedicoxespeceditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    // xservicio
+    { path: 'medico/:profile/xservicio/plistx/:id/:page/:rpp',
+    component: MedicoxservicioplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+   { path: 'medico/:profile/xservicio/newx/:id',
+    component: MedicoxservicionewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+   { path: 'medico/:profile/xservicio/editx/:id/:xid',
+    component: MedicoxservicioeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    // xcentrosanitario
+    { path: 'medico/:profile/xcentrosanitario/plistx/:id/:page/:rpp',
+    component: MedicoxcentrosanplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+   { path: 'medico/:profile/xcentrosanitario/newx/:id',
+    component: MedicoxcentrosannewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+   { path: 'medico/:profile/xcentrosanitario/editx/:id/:xid',
+    component: MedicoxcentrosaneditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    // xcategoriaprofesional
+    { path: 'episodio/:profile/xcategoriaprofesional/plistx/:id/:page/:rpp',
+    component: MedicoxcategoplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+   { path: 'episodio/:profile/xcategoriaprofesional/newx/:id',
+    component: MedicoxcategonewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+   { path: 'episodio/:profile/xcategoriaprofesional/editx/:id/:xid',
+    component: MedicoxcategoeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // ----------------MODALIDAD EPISODIO-----------------
     { path: 'modalidadepisodio/:profile/plist/:page/:rpp',
@@ -379,9 +551,9 @@ export const app_routes: Routes = [
     { path: 'modalidadepisodio/:profile/remove/:id',
      component: Modalidadepisodioremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'modalidadepisodio/:profile/edit/:id',
-     component: Tipousuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Modalidadepisodioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'modalidadepisodio/:profile/new',
-     component: Gruponew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Modalidadepisodionew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // ----------------SERVICIO-----------------
     { path: 'servicio/:profile/plist/:page/:rpp',
@@ -391,22 +563,23 @@ export const app_routes: Routes = [
     { path: 'servicio/:profile/remove/:id',
      component: Servicioremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'servicio/:profile/edit/:id',
-     component: Tipousuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Servicioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'servicio/:profile/new',
-     component: Gruponew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: Servicionew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     // xtiposervicio
     { path: 'servicio/:profile/xtiposervicio/plistx/:id/:page/:rpp',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'servicio/:profile/xtiposervicio/newx',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'servicio/:profile/xtiposervicio/editx/:id',
-     component: Xtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     component: ServicioxtiposervicioplistComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'servicio/:profile/xtiposervicio/newx/:id',
+     component: ServicioxtiposervicionewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'servicio/:profile/xtiposervicio/editx/:id/:xid',
+     component: ServicioxtiposervicioeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // ----------------SEXO-----------------
     { path: 'sexo/:profile/plist/:page/:rpp', component: Sexoplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'sexo/:profile/view/:id', component: Sexoview1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3,4,5' }},
     { path: 'sexo/:profile/remove/:id', component: Sexoremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'sexo/:profile/edit/:id', component: Tipousuarioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'sexo/:profile/new', component: Gruponew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'sexo/:profile/edit/:id', component: Sexoedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'sexo/:profile/new', component: Sexonew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // ----------------CIRCUNSTANCIAS ALTA----------------
     { path: 'circunstanciasalta/:profile/plist/:page/:rpp',
@@ -431,6 +604,18 @@ export const app_routes: Routes = [
      component: Tipopagoedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'tipopago/:profile/new',
      component: Tipopagonew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+
+      // ----------------TIPO SERVICIO----------------
+    { path: 'tiposervicio/:profile/plist/:page/:rpp',
+    component: Tiposervicioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+   { path: 'tiposervicio/:profile/view/:id',
+    component: Tiposervicioview1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3,4,5' }},
+   { path: 'tiposervicio/:profile/remove/:id',
+    component: Tiposervicioremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+   { path: 'tiposervicio/:profile/edit/:id',
+    component: Tiposervicioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+   { path: 'tiposervicio/:profile/new',
+    component: Tiposervicionew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // { path: '/passchange', component: PasschangeComponent },
     { path: '**', pathMatch: 'full', redirectTo: '/home' },

@@ -3,6 +3,7 @@ import { ServiceConnService } from '../../../service/service-conn.service';
 import { ConstantServiceService } from '../../../service/constant-service.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToolService } from '../../../service/tool.service';
+import { SessionService } from '../../../service/session.service';
 @Component({
   selector: 'app-usuarionew1',
   templateUrl: '../../../shared/aplicaciones/newedit.html',
@@ -11,7 +12,7 @@ import { ToolService } from '../../../service/tool.service';
 export class Usuarionew1Component implements OnInit {
   ob = 'usuario';
   op = 'new';
-  profile = 1;
+  profile = this.sessionService.getSessionProfile();
 
   status = null;
   debugging = this.constantService.debugging();
@@ -28,7 +29,8 @@ export class Usuarionew1Component implements OnInit {
     private constantService: ConstantServiceService,
     private router: Router,
     private toolService: ToolService,
-    private actRoute: ActivatedRoute
+    private actRoute: ActivatedRoute,
+    private sessionService: SessionService
   ) {}
 
   ngOnInit() {
@@ -45,7 +47,7 @@ export class Usuarionew1Component implements OnInit {
         this.variable.json.metaProperties.forEach(function(property) {
           if (property.Type === 'ForeignObject') {
             console.log(property.Name);
-            this.bean.property.Name = [{}];
+            // this.bean.property.Name = [{}];
             // this.bean[property.Name].data = [{}];
             // this.bean[property.Name].data.id = 0;
           }

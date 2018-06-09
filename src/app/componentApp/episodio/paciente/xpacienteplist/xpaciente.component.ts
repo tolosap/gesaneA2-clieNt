@@ -14,7 +14,7 @@ import { Observable } from 'rxjs/Observable';
   templateUrl: '../../../../shared/aplicaciones/plist.html',
   styleUrls: ['./xpaciente.component.css']
 })
-export class XpacienteComponent implements OnInit {
+export class EpisodioxpacienteplistComponent implements OnInit {
   ob = 'episodio';
   op = 'plistx';
   profile = 1;

@@ -8,12 +8,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { ToolService } from '../../../../../service/tool.service';
 import 'rxjs/add/operator/switchMap';
 import { Observable } from 'rxjs/Observable';
+
 @Component({
   selector: 'app-xusuarioplist1',
   templateUrl: '../../../../../shared/aplicaciones/plist.html',
   styleUrls: ['./xusuarioplist1.component.css']
 })
-export class Xusuarioplist1Component implements OnInit {
+export class Grupoxusuarioplist1Component implements OnInit {
   ob = 'grupo';
   op = 'plistx';
   profile = 1;

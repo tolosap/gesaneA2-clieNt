@@ -3,6 +3,7 @@ import { ServiceConnService } from '../../../service/service-conn.service';
 import { ConstantServiceService } from '../../../service/constant-service.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToolService } from '../../../service/tool.service';
+import { SessionService } from '../../../service/session.service';
 
 @Component({
   selector: 'app-usuarioedit1',
@@ -13,13 +14,13 @@ import { ToolService } from '../../../service/tool.service';
 export class Usuarioedit1Component implements OnInit {
   ob = 'usuario';
   op = 'edit';
-  profile = 1;
+  profile = this.sessionService.getSessionProfile();
 
   id: number;
 
   status = null;
-  // debugging = this.constantService.debugging();
-  debugging = 2;
+  debugging = this.constantService.debugging();
+  // debugging = 2;
   url = this.ob + '/' + this.profile + '/' + this.op;
 
   variable;
@@ -44,7 +45,8 @@ export class Usuarioedit1Component implements OnInit {
     private constantService: ConstantServiceService,
     private router: Router,
     private toolService: ToolService,
-    private actRoute: ActivatedRoute
+    private actRoute: ActivatedRoute,
+    private sessionService: SessionService
   ) {}
 
   ngOnInit() {

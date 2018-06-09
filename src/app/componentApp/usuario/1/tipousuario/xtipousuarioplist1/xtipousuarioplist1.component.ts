@@ -1,22 +1,21 @@
+import { SessionService } from './../../../../../service/session.service';
 import { Component, OnInit } from '@angular/core';
-import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 import { ConstantServiceService } from '../../../../../service/constant-service.service';
-import { SessionServerCallService } from '../../../../../service/session-server-call.service';
 import { ServiceConnService } from '../../../../../service/service-conn.service';
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToolService } from '../../../../../service/tool.service';
 import 'rxjs/add/operator/switchMap';
-import { Observable } from 'rxjs/Observable';
+
 @Component({
   selector: 'app-xtipousuarioplist1',
   templateUrl: '../../../../../shared/aplicaciones/plist.html',
   styleUrls: ['./xtipousuarioplist1.component.css']
 })
-export class Xtipousuarioplist1Component implements OnInit {
+export class Usuarioxtipousuarioplist1Component implements OnInit {
   ob = 'usuario';
   op = 'plistx';
-  profile = 1;
+  profile = this.sessionService.getSessionProfile();
   // ----
   xob = 'tipousuario';
   xid: number;
@@ -57,7 +56,8 @@ export class Xtipousuarioplist1Component implements OnInit {
     private location: Location,
     private router: Router,
     private toolService: ToolService,
-    private actRoute: ActivatedRoute
+    private actRoute: ActivatedRoute,
+    private sessionService: SessionService
   ) {}
 
   ngOnInit() {

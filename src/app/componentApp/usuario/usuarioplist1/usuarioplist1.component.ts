@@ -1,14 +1,11 @@
 import { SessionService } from './../../../service/session.service';
 import { Component, OnInit } from '@angular/core';
-import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 import { ConstantServiceService } from '../../../service/constant-service.service';
-import { SessionServerCallService } from '../../../service/session-server-call.service';
 import { ServiceConnService } from '../../../service/service-conn.service';
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToolService } from '../../../service/tool.service';
 import 'rxjs/add/operator/switchMap';
-import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-usuarioplist1',
@@ -16,7 +13,7 @@ import { Observable } from 'rxjs/Observable';
   // templateUrl: './usuarioplist1.component.html',
   styleUrls: ['./usuarioplist1.component.css']
 })
-export class Usuarioplist1Component implements OnInit, OnDestroy {
+export class Usuarioplist1Component implements OnInit {
 
   ob = 'usuario';
   op = 'plist';
@@ -55,10 +52,6 @@ export class Usuarioplist1Component implements OnInit, OnDestroy {
     private actRoute: ActivatedRoute,
     private sessionService: SessionService
   ) {}
-
-  ngOnDestroy() {
-    // this.sub.unsubscribe();
-  }
 
   ngOnInit() {
     // ESTO SERIA COMO $ROUTERPARAMS EN AJS
