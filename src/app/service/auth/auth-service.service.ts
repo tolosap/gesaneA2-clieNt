@@ -6,10 +6,12 @@ export class AuthServiceService {
 
   constructor(public sessionService: SessionService) { }
 
-  public isAuthenticated(value, length): boolean {
-    for ( let i = 0; i < length; i++) {
-      if ( value[i] === localStorage.getItem('profile')) {
-        return true;
+  public amIAbleTo(value, length, profile): boolean {
+    if ( profile === localStorage.getItem('profile')) {
+      for ( let i = 0; i < length; i++) {
+        if ( value[i] === localStorage.getItem('profile')) {
+          return true;
+        }
       }
     }
     return false;
