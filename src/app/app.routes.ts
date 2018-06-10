@@ -216,6 +216,16 @@ import { Tiposervicioview1Component } from './componentApp/tiposervicio/tiposerv
 import { Tiposervicioremove1Component } from './componentApp/tiposervicio/tiposervicioremove1/tiposervicioremove1.component';
 import { Tiposervicioedit1Component } from './componentApp/tiposervicio/tiposervicioedit1/tiposervicioedit1.component';
 import { PacienteeditComponent } from './componentApp/paciente/pacienteedit/pacienteedit.component';
+import { Tipodependenciaplist1Component } from './componentApp/tipodependencia/tipodependenciaplist1/tipodependenciaplist1.component';
+import { Tipodependenciaview1Component } from './componentApp/tipodependencia/tipodependenciaview1/tipodependenciaview1.component';
+import { Tipodependenciaremove1Component } from './componentApp/tipodependencia/tipodependenciaremove1/tipodependenciaremove1.component';
+import { Tipodependenciaedit1Component } from './componentApp/tipodependencia/tipodependenciaedit1/tipodependenciaedit1.component';
+import { Tipodependencianew1Component } from './componentApp/tipodependencia/tipodependencianew1/tipodependencianew1.component';
+import { Tipoepisodioplist1Component } from './componentApp/tipoepisodio/tipoepisodioplist1/tipoepisodioplist1.component';
+import { Tipoepisodioview1Component } from './componentApp/tipoepisodio/tipoepisodioview1/tipoepisodioview1.component';
+import { Tipoepisodioremove1Component } from './componentApp/tipoepisodio/tipoepisodioremove1/tipoepisodioremove1.component';
+import { Tipoepisodioedit1Component } from './componentApp/tipoepisodio/tipoepisodioedit1/tipoepisodioedit1.component';
+import { Tipoepisodionew1Component } from './componentApp/tipoepisodio/tipoepisodionew1/tipoepisodionew1.component';
 
 
 export const app_routes: Routes = [
@@ -253,8 +263,8 @@ export const app_routes: Routes = [
      component: Usuarioxtipousuarioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
     { path: 'usuario/:profile/xtipousuario/newx/:id',
      component: UsuarioxtipousuarionewComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
-    { path: 'usuario/:profile/xtipousuario/editx/:id/:xid/',
-     component: UsuarioxtipousuarioeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     { path: 'usuario/:profile/xtipousuario/editx/:id/:xid',
+      component: UsuarioxtipousuarioeditComponent, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // ---------TIPO USUARIO-----------
     { path: 'tipousuario/:profile/plist/:page/:rpp',
@@ -616,6 +626,30 @@ export const app_routes: Routes = [
     component: Tiposervicioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
    { path: 'tiposervicio/:profile/new',
     component: Tiposervicionew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+
+     // ----------------TIPO DEPENDENCIA----------------
+     { path: 'tipodependencia/:profile/plist/:page/:rpp',
+     component: Tipodependenciaplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'tipodependencia/:profile/view/:id',
+     component: Tipodependenciaview1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3,4,5' }},
+    { path: 'tipodependencia/:profile/remove/:id',
+     component: Tipodependenciaremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'tipodependencia/:profile/edit/:id',
+     component: Tipodependenciaedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+    { path: 'tipodependencia/:profile/new',
+     component: Tipodependencianew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+
+      // ----------------TIPO EPISODIO----------------
+      { path: 'tipoepisodio/:profile/plist/:page/:rpp',
+      component: Tipoepisodioplist1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     { path: 'tipoepisodio/:profile/view/:id',
+      component: Tipoepisodioview1Component, canActivate: [RoleGuard], data: { expectedRole: '1,3,4,5' }},
+     { path: 'tipoepisodio/:profile/remove/:id',
+      component: Tipoepisodioremove1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     { path: 'tipoepisodio/:profile/edit/:id',
+      component: Tipoepisodioedit1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
+     { path: 'tipoepisodio/:profile/new',
+      component: Tipoepisodionew1Component, canActivate: [RoleGuard], data: { expectedRole: '1' }},
 
     // { path: '/passchange', component: PasschangeComponent },
     { path: '**', pathMatch: 'full', redirectTo: '/home' },

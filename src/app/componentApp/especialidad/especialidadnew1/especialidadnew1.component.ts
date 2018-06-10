@@ -10,7 +10,7 @@ import { SessionService } from '../../../service/session.service';
   styleUrls: ['./especialidadnew1.component.css']
 })
 export class Especialidadnew1Component implements OnInit {
-  ob = 'usuario';
+  ob = 'especialidad';
   op = 'new';
   profile = this.sessionService.getSessionProfile();
 

@@ -47,7 +47,7 @@ export class Servicionew1Component implements OnInit {
         this.variable.json.metaProperties.forEach(function(property) {
           if (property.Type === 'ForeignObject') {
             console.log(property.Name);
-            this.bean.property.Name = [{}];
+            // this.bean.property.Name = [{}];
             // this.bean[property.Name].data = [{}];
             // this.bean[property.Name].data.id = 0;
           }

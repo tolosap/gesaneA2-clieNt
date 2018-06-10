@@ -67,9 +67,9 @@ export class Pacientenew1Component implements OnInit {
     };
     this.serverCallService.set(this.ob, jsonToSend).subscribe(response => {
       this.variable2 = response;
-      if (this.variable2.data.status === 200) {
+      if (this.variable2.status === 200) {
         this.status =
-          'El registro se ha creado con id=' + this.variable2.data.json;
+          'El registro se ha creado con id=' + this.variable2.json;
         this.bean['id'] = this.variable2.json;
       } else {
         this.status = 'Error en la recepción de datos del servidor';
