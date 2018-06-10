@@ -11,7 +11,7 @@ import { ToolService } from '../../../service/tool.service';
   styleUrls: ['./facturaremove1.component.css']
 })
 export class Facturaremove1Component implements OnInit {
-  ob = 'tipousuario';
+  ob = 'factura';
   op = 'remove';
   profile = 1;
   // ---

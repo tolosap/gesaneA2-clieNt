@@ -22,9 +22,10 @@ export class UsuarioxtipousuarionewComponent implements OnInit {
   debugging = this.constantService.debugging();
   url = this.ob + '/' + this.profile + '/' + this.op;
 
+  variable3;
   variable;
   variable2;
-  variable3;
+
 
   metao;
   metap;
@@ -44,24 +45,21 @@ export class UsuarioxtipousuarionewComponent implements OnInit {
     this.actRoute.params.subscribe(params => {
       this.xid = params['id'];
     });
-    this.getLinked();
-  }
-
-  getLinked() {
-    const self = this;
-    if (this.xob && this.xid) {
-      this.serverCallService.getOne(this.xob, this.xid).subscribe(function (response) {
-        this.variable3 = response;
-          if (this.variable3.status === 200) {
-            console.log(this.variable3.json);
-            this.linkedbean = this.variable3.json;
-            self.getMeta();
-          }
-      }, error => (this.status = 'Error en la recepción de datos del servidor'));
-    }
+    this.getMeta();
   }
 
   getMeta() {
+    if (this.xob && this.xid) {
+      this.linkedbean = null;
+      this.serverCallService.getOne(this.xob, this.xid).subscribe(response => {
+        this.variable3 = response;
+        if (this.variable3.status === 200) {
+          this.linkedbean = this.variable3.json;
+        }
+      }, error => (this.status = 'Error en la recepción de datos del servidor'));
+    }
+
+
     this.serverCallService.getMeta(this.ob).subscribe(response => {
       this.variable = response;
       console.log(this.variable);

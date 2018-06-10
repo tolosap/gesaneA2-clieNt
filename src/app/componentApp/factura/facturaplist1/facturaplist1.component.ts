@@ -16,7 +16,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class Facturaplist1Component implements OnInit {
 
-  ob = 'tipousuario';
+  ob = 'factura';
   op = 'plist';
   profile = 1;
   // ----

@@ -8,14 +8,14 @@
             <app-header [ob]="ob" [op]="op"></app-header>
           </div>
           <div class="panel-body">
-            <div class="row" *ngIf="linkedbean != null">
+            <div class="row" *ngIf="linkedbean || linkedbean2 || linkedbean3 || linkedbean4">
               <div class="col-xs-12">
                 <div class="alert alert-info" role="alert">
                   <h3 *ngIf="linkedbean" class="bg-info">
                     <a href="{{linkedbean.metaObject.TableName}}/{{profile}}/view/{{linkedbean.data.id}}">
                       <span class="{{linkedbean.metaObject.Icon}}"></span> {{linkedbean.metaObject.SingularDescription}}: {{linkedbean|GetForeignDescription}}</a>
                   </h3>
-                  <!-- <h3 *ngIf="linkedbean2" class="bg-info">
+                  <h3 *ngIf="linkedbean2" class="bg-info">
                     <a href="{{linkedbean2.metaObject.TableName}}/{{profile}}/view/{{linkedbean2.data.id}}">
                       <span class="{{linkedbean2.metaObject.Icon}}"></span> {{linkedbean2.metaObject.SingularDescription}}: {{linkedbean2|GetForeignDescription}}</a>
                   </h3>
@@ -26,7 +26,7 @@
                   <h3 *ngIf="linkedbean4" class="bg-info">
                     <a href="{{linkedbean4.metaObject.TableName}}/{{profile}}/view/{{linkedbean4.data.id}}">
                       <span class="{{linkedbean4.metaObject.Icon}}"></span> {{linkedbean4.metaObject.SingularDescription}}: {{linkedbean4|GetForeignDescription}}</a>
-                  </h3> -->
+                  </h3>
                 </div>
               </div>
             </div>

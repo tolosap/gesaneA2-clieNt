@@ -48,7 +48,7 @@ export class MenuComponent implements OnInit {
       if (this.interm.status === 200) {
             this.status = null;
             this.meta = this.interm.json;
-            // console.log(this.interm);
+            // console.log(this.meta.usuario);
       } else {
         this.status = 'Error en la recepción de datos del servidor';
       }
